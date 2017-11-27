@@ -1,0 +1,20 @@
+@import "custom_fonts";
+@import "colors";
+// assets location
+$assets: "/img/";
+
+// fonts
+$body-font: Helvetica, Arial, sans-serif;
+
+// colors - brand
+$brand-primary: $neutral-10;
+$brand-primary-contrast: $neutral-0;
+
+$brand-secondary: $neutral-0;
+$brand-secondary-contrast: $neutral-10;
+
+$brand-tertiary: $neutral-0;
+$brand-tertiary-contrast: $neutral-0;
+
+$band-negative-validation: #A00;
+$band-positive-validation: #64AA00;

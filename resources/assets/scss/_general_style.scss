@@ -1,0 +1,12 @@
+@import "custom_variables";
+
+*, html{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: $body-font;
+	color: $neutral-10;
+}
+
