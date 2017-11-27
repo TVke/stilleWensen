@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title','contact - ')
+@section('title', __('app.menu-info').' - ')
 @section('content')
 
 @endsection
