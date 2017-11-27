@@ -10,3 +10,62 @@ body{
 	color: $neutral-10;
 }
 
+header{
+	border-bottom: 1px solid $neutral-2;
+	box-shadow: 1px 0 1px $neutral-4;
+}
+
+.logo{
+	display: block;
+	color: $neutral-10;
+	text-decoration: none;
+	text-align: center;
+
+	h1{
+		color: inherit;
+		padding: 10px;
+	}
+}
+
+.menu{
+	display: block;
+	width: 225px;
+	margin: 0 auto;
+
+	ul{
+		display: flex;
+		padding: 0 10px 10px;
+		list-style: none;
+		justify-content: center;
+
+		li{
+			padding: 5px 10px;
+
+			a{
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+	}
+	@media (min-width: 660px){
+		position: absolute;
+		top: 5px;
+		right: 0;
+
+		ul{
+			padding: 10px;
+		}
+	}
+
+	&.var-footer{
+
+	}
+}
+
+footer{
+
+}
+
+.share{
+
+}

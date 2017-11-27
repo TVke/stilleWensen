@@ -5,3 +5,43 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   color: black; }
+
+header {
+  border-bottom: 1px solid #cccccc;
+  -webkit-box-shadow: 1px 0 1px #999999;
+          box-shadow: 1px 0 1px #999999; }
+
+.logo {
+  display: block;
+  color: black;
+  text-decoration: none;
+  text-align: center; }
+  .logo h1 {
+    color: inherit;
+    padding: 10px; }
+
+.menu {
+  display: block;
+  width: 225px;
+  margin: 0 auto; }
+  .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 10px 10px;
+    list-style: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .menu ul li {
+      padding: 5px 10px; }
+      .menu ul li a {
+        text-decoration: none;
+        color: inherit; }
+  @media (min-width: 660px) {
+    .menu {
+      position: absolute;
+      top: 5px;
+      right: 0; }
+      .menu ul {
+        padding: 10px; } }
