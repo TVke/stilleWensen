@@ -45,3 +45,8 @@ header {
       right: 0; }
       .menu ul {
         padding: 10px; } }
+
+.share ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
