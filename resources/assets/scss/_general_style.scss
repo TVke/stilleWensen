@@ -47,18 +47,14 @@ header{
 			}
 		}
 	}
-	@media (min-width: 660px){
-		position: absolute;
-		top: 5px;
-		right: 0;
-
-		ul{
-			padding: 10px;
-		}
-	}
 
 	&.var-footer{
+		width: 110px;
 
+		ul{
+			list-style: disc;
+			display: block;
+		}
 	}
 }
 
@@ -67,7 +63,10 @@ footer{
 }
 
 .share{
+	text-align: center;
 	ul{
+		list-style: none;
 		display: flex;
+		justify-content: space-around;
 	}
 }
