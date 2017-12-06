@@ -1,0 +1,15 @@
+011937 algemene donker blauwe kleur
+
+
+
+43cfcc  kleur randen, 
+
+3dbfbb  highlight ("dove") in tekst
+
+48e0db  extra fel voor nav
+
+247c79  donkerder voor buttons
+
+
+
+c2c1c1  tekst niet gehighlight
