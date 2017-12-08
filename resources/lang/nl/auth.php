@@ -15,5 +15,9 @@ return [
 
 	'failed'   => 'Deze combinatie van e-mailadres en wachtwoord is niet geldig.',
 	'throttle' => 'Te veel mislukte loginpogingen. Probeer het over :seconds seconden nogmaals.',
+	'user_label' => 'Gebruikersnaam',
+	'password_label' => 'Wachtwoord',
+	'remember_label' => 'Onthoud Mij',
+	'login_button' => 'Inloggen',
 
 ];

@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 class PublicPageController extends Controller
 {
 	/**
-	 * Show the info page.
+	 * Create a new controller instance.
 	 *
-	 * @return \Illuminate\Http\Response
 	 */
-	public function info()
+	public function __construct()
 	{
-		return view('info');
+		$this->middleware('guest');
 	}
+
 
 	/**
 	 * Show the overview page.
@@ -24,15 +24,5 @@ class PublicPageController extends Controller
 	public function overview()
 	{
 		return view('overview');
-	}
-
-	/**
-	 * Show the contact page.
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
-	public function contact()
-	{
-		return view('contact');
 	}
 }

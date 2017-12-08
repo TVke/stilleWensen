@@ -6,26 +6,63 @@
 }
 
 body{
+	background: $bg-blue-dark;
 	font-family: $body-font;
-	color: $neutral-10;
+	color: $text-white;
+	text-align: center;
 }
 
-header{
-	border-bottom: 1px solid $neutral-2;
-	box-shadow: 1px 0 1px $neutral-4;
+a{
+	display: block;
+	color: inherit;
+}
+
+h1, h2, h3, h4{
+	font-weight: normal;
+}
+
+h2 span{
+	color: $text-highlight-blue;
 }
 
 .logo{
 	display: block;
-	color: $neutral-10;
 	text-decoration: none;
 	text-align: center;
 
 	h1{
-		color: inherit;
 		padding: 10px;
+		font-weight: normal;
+		font-size: 1.5em;
 	}
 }
+
+.button{
+	background: $btn-bg-blue;
+	padding: 10px 20px;
+	text-decoration: none;
+	display: inline-block;
+	margin: 20px auto;
+}
+
+.diamond-image{
+	display: block;
+	background: $border-blue;
+	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	//clip-path: polygon(50% 1%, 100% 51%, 50% 99%, 0% 51%);
+}
+//.diamond-border{
+//	content: "";
+//	display: block;
+//	background: $border-blue;
+//	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+//	//position: absolute;
+//	//top: 0;
+//	//right: 0;
+//	//bottom: 0;
+//	//left: 0;
+//	//z-index: -1;
+//}
 
 .menu{
 	display: block;
@@ -33,40 +70,71 @@ header{
 	margin: 0 auto;
 
 	ul{
-		display: flex;
-		padding: 0 10px 10px;
 		list-style: none;
-		justify-content: center;
 
 		li{
-			padding: 5px 10px;
-
-			a{
-				text-decoration: none;
-				color: inherit;
-			}
+			line-height: 150%;
 		}
 	}
+}
 
-	&.var-footer{
-		width: 110px;
+header .menu ul{
+	display: flex;
+	justify-content: center;
+	padding: 10px;
 
-		ul{
-			list-style: disc;
-			display: block;
+	li a{
+		text-decoration: none;
+		padding: 5px 10px;
+
+		&.active, &.active:hover{
+			color: $nav-active-blue;
+		}
+
+		&:hover{
+			color: darken($text-white,10%);
 		}
 	}
 }
 
 footer{
+	.share{
+		padding: 40px 10px;
+		border-top: 1px solid $border-blue;
+		border-bottom: 1px solid $border-blue;
 
-}
+		h3{
+			padding: 10px 0;
+		}
 
-.share{
-	text-align: center;
-	ul{
-		list-style: none;
-		display: flex;
-		justify-content: space-around;
+		p{
+			padding: 10px 0 30px;
+		}
+
+		ul{
+			list-style: none;
+			display: flex;
+			justify-content: space-around;
+			max-width: 500px;
+			margin: 0 auto;
+
+			li a img{
+				@extend .diamond-image;
+			}
+		}
+	}
+
+	.bottom{
+		.contact{
+
+		}
+		.menu ul{
+
+		}
+		.charity{
+
+		}
 	}
 }
+
+
