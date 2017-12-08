@@ -11,14 +11,19 @@
 |
 */
 
-Route::get('/', 'PublicPageController@info')->name('info');
+Route::view('/','info')->name('info');
+Route::view('/contact','contact')->name('contact');
 Route::get('/overzicht', 'PublicPageController@overview')->name('overview');
 Route::get('/video/{user_slug}','PublicPageController@video')->name('detail');
 Route::get('/video/{user_slug}/{sound_slug}','PublicPageController@sound_video')->name('detail_sound');
-Route::get('/contact', 'PublicPageController@contact')->name('contact');
+Route::post('/contact','PublicPageController@contact');
 
-Auth::routes();
+/* Auth */
+Route::get('/meir','Auth\LoginController@showLoginForm')->name('login');
+Route::post('/meir','Auth\LoginController@login');
+Route::post('/logout','Auth\LoginController@logout')->name('logout');
 
 Route::get('/wisher', 'VideoController@create')->name('create_wisher');
-Route::get('/wisher/add', 'VideoController@store')->name('store_wisher');
+Route::post('/wisher/add', 'VideoController@store')->name('store_wisher');
 Route::get('/wishers', 'VideoController@index')->name('wishers');
+Route::get('/terms','VideoController@terms')->name('terms');

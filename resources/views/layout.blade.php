@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title'){{ __('app.silent')}} {{ __('app.wishes') }}</title>
+    <title>@yield('title'){{ __('app.title') }}</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -15,35 +15,61 @@
 </head>
 <body>
 <header>
-	<a class="logo" href="{{ route('info') }}">
-		<h1>{{ __('app.silent') }} <span></span> {{ __('app.wishes') }}</h1>
+	<a class="logo" href="{{ url()->current() }}">
+		<img src="{{ asset('/img/logo.svg') }}" alt="logo" role="presentation">
+		<h1>{{ __('app.title') }}</h1>
 	</a>
-	<nav class="menu">
-		<ul>
-			<li><a href="{{ route('info') }}">{{ __('app.menu-info') }}</a></li>
-			<li><a href="{{ route('overview') }}">{{ __('app.menu-overview') }}</a></li>
-			<li><a href="{{ route('contact') }}">{{ __('app.menu-contact') }}</a></li>
-		</ul>
-	</nav>
+	@guest
+		<nav class="menu">
+			<ul>
+				<li><a href="{{ route('info') }}"{{ Route::currentRouteName()==="info"?' class=active':'' }}>{{ __('app.menu-info') }}</a></li>
+				<li><a href="{{ route('overview') }}"{{ Route::currentRouteName()==="overview" || Route::currentRouteName()==="detail"?' class=active':'' }}>{{ __('app.menu-overview') }}</a></li>
+				<li><a href="{{ route('contact') }}"{{ Route::currentRouteName()==="contact"?' class=active':'' }}>{{ __('app.menu-contact') }}</a></li>
+			</ul>
+		</nav>
+		@else
+		<form action="{{ route('logout') }}" method="post">
+			{{ csrf_field() }}
+			<input type="submit" value="log uit">
+		</form>
+	@endguest
 </header>
-@yield('content')
+<main class="{{ Route::currentRouteName() }}">
+	@yield('content')
+</main>
+@guest
 <footer>
 	<section class="share">
-		<h3>{{ __('app.footer-title') }}</h3>
+		<h3>{{ __('app.share-title') }}</h3>
+		<p>{{ __('app.share-info') }}</p>
 		<ul>
-			<li><a href="" title="facebook"><img src="{{ asset('/img/icons/facebook.svg') }}" alt="facebook logo"></a></li>
-			<li><a href="" title="twitter"><img src="{{ asset('/img/icons/twitter.svg') }}" alt="twitter logo"></a></li>
-			<li><a href="" title="pintrest"><img src="{{ asset('/img/icons/pintrest.svg') }}" alt="pintrest logo"></a></li>
+			<li><a href="" title="Facebook"><img src="{{ asset('/img/icons/facebook.svg') }}" alt="Facebook logo"></a></li>
+			<li><a href="" title="Twitter"><img src="{{ asset('/img/icons/twitter.svg') }}" alt="Twitter logo"></a></li>
+			<li><a href="" title="Google+"><img src="{{ asset('/img/icons/google.svg') }}" alt="Google+ logo"></a></li>
+			<li><a href="" title="Pintrest"><img src="{{ asset('/img/icons/pintrest.svg') }}" alt="Pintrest logo"></a></li>
 		</ul>
 	</section>
-	<nav class="menu var-footer">
-		<ul>
-			<li><a href="{{ route('info') }}">{{ __('app.menu-info') }}</a></li>
-			<li><a href="{{ route('overview') }}">{{ __('app.menu-overview') }}</a></li>
-			<li><a href="{{ route('contact') }}">{{ __('app.menu-contact') }}</a></li>
-		</ul>
-	</nav>
+	<section class="bottom">
+		<div class="contact">
+			<p>{{ __('app.footer-contact-info') }}</p>
+			<a href="{{ route('contact') }}" class="button">{{ __('app.footer-contact-button') }}</a>
+		</div>
+		<nav class="menu">
+			<h4>{{ __('app.footer-menu-title') }}</h4>
+			<ul>
+				<li><a href="{{ route('info') }}">{{ __('app.menu-info') }}</a></li>
+				<li><a href="{{ route('overview') }}">{{ __('app.menu-overview') }}</a></li>
+				<li><a href="{{ route('contact') }}">{{ __('app.menu-contact') }}</a></li>
+			</ul>
+		</nav>
+		<div class="charity">
+			<p>{{ __('app.footer-charity-info') }}</p>
+			<a href="{{ url('http://www.doof.vlaanderen/over-doof-vlaanderen') }}" class="button">{{ __('app.footer-charity-button') }}</a>
+		</div>
+	</section>
+	<p class="copywrite">{{ __('app.footer-copywrite',['year' => date("Y")]) }}</p>
 </footer>
+@endguest
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
