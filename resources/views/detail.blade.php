@@ -7,5 +7,5 @@
 		<p>{!! starToElement(__('app.wishes-personal',['Sender' => 'Lize','Reciever' => 'Laura']),"strong") !!}</p>
 		<video src="{{ asset('vid/nosound/Lize.mp4') }}" controls></video>
 	</div>
-
+    <script src="{{ asset('js/app.js') }}"></script>
 @endsection
