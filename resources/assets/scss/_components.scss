@@ -1,0 +1,32 @@
+.diamond{
+    clip-path: polygon(50% 2px, calc(100% - 2px) 50%, 50% calc(100% - 2px), 2px 50%);
+    @apply .block .bg-blue-darkest
+}
+.diamond-border{
+    @apply .block .relative
+}
+.diamond-border::before{
+    content: "";
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    @apply .bg-teal .absolute .pin
+}
+
+.button{
+    @apply .font-semibold .leading-none .text-sm .inline-block .bg-teal-darker .no-underline .p-3 .mx-auto .my-8
+}
+
+.menu{
+    @apply .block .w-64 .mx-auto
+}
+.menu ul {
+    @apply .list-reset
+}
+.menu ul li a{
+    @apply .block .leading-normal .text-base
+}
+.menu ul li a:hover{
+    @apply .text-grey
+}
+.menu ul li a.active,.menu ul li a.active:hover {
+    @apply .text-teal-light
+}

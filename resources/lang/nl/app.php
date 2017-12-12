@@ -19,6 +19,8 @@ return [
 	'menu-overview' => 'Wensen',
 	'menu-contact' => 'Contact',
 
+    'logout' => 'log uit',
+
 	/* info-page */
 	'first-title' => 'Elk jaar worden er tijdens de feestdagen nogal wat wensen uitgedeeld...',
 	'first-content' => "Zelf hadden we het geluk een aantal van *deze wensen* te mogen beluisteren en *vastleggen* tijdens een bezoekje aan de Meir in Antwerpen. Er zat enkel een *kleine twist* in de aflevering van de wensen...",
@@ -46,6 +48,10 @@ return [
 	'contact-email' => 'Email:',
 	'contact-question' => 'Vraag:',
 	'contact-submit' => 'STUUR',
+
+    'contact-text-question' => 'Heb je een vraag over het project of doofheid?',
+    'contact-text-answer' => 'Geen probleem, we antwoorden zo snel mogelijk op jouw vraag!',
+    'contact-link-context' => 'Bezoek ook de Doof Vlaanderen website',
 
 	/* footer */
     'share-title' => 'Deel',

@@ -13,63 +13,62 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6694a2">
 	<meta name="theme-color" content="#0E2640">
 </head>
-<body>
+<body class="bg-blue-darkest font-dosis font-normal text-grey-light text-center leading-normal">
 <header>
-	<a class="logo" href="{{ url()->current() }}">
-		<img src="{{ asset('/img/logo.svg') }}" alt="logo" role="presentation">
-		<h1>{{ __('app.title') }}</h1>
+	<a href="{{ url()->current() }}" class="block text-center no-underline text-grey-light">
+		<img src="{{ asset('/img/laatste_logo.svg') }}" alt="logo" role="presentation" class="w-32 block m-auto relative up-15">
+		<h1 class="text-2xl leading-normal">{{ __('app.title') }}</h1>
 	</a>
 	@guest
 		<nav class="menu">
-			<ul>
-				<li><a href="{{ route('info') }}"{{ Route::currentRouteName()==="info"?' class=active':'' }}>{{ __('app.menu-info') }}</a></li>
-				<li><a href="{{ route('overview') }}"{{ Route::currentRouteName()==="overview" || Route::currentRouteName()==="detail"?' class=active':'' }}>{{ __('app.menu-overview') }}</a></li>
-				<li><a href="{{ route('contact') }}"{{ Route::currentRouteName()==="contact"?' class=active':'' }}>{{ __('app.menu-contact') }}</a></li>
+			<ul class="flex justify-around">
+				<li><a href="{{ route('info') }}" class="p-4{{ Route::currentRouteName()==="info"?' active':'' }}">{{ __('app.menu-info') }}</a></li>
+				<li><a href="{{ route('overview') }}" class="p-4{{ Route::currentRouteName()==="overview" || Route::currentRouteName()==="detail"?' active':'' }}">{{ __('app.menu-overview') }}</a></li>
+				<li><a href="{{ route('contact') }}" class="p-4{{ Route::currentRouteName()==="contact"?' active':'' }}">{{ __('app.menu-contact') }}</a></li>
 			</ul>
 		</nav>
 		@else
 		<form action="{{ route('logout') }}" method="post">
 			{{ csrf_field() }}
-			<input type="submit" value="log uit">
+			<input type="submit" value="{{ __('app.logout') }}">
 		</form>
 	@endguest
 </header>
-<main class="{{ Route::currentRouteName() }}">
+<main>
 	@yield('content')
 </main>
 @guest
 <footer>
-	<section class="share">
-		<h3>{{ __('app.share-title') }}</h3>
-		<p>{{ __('app.share-info') }}</p>
-		<ul>
-			<li><a href="" title="Facebook"><img src="{{ asset('/img/icons/facebook.svg') }}" alt="Facebook logo"></a></li>
-			<li><a href="" title="Twitter"><img src="{{ asset('/img/icons/twitter.svg') }}" alt="Twitter logo"></a></li>
-			<li><a href="" title="Google+"><img src="{{ asset('/img/icons/google.svg') }}" alt="Google+ logo"></a></li>
-			<li><a href="" title="Pintrest"><img src="{{ asset('/img/icons/pintrest.svg') }}" alt="Pintrest logo"></a></li>
+	<section class="px-1 py-8 my-8 border-t border-b border-teal block">
+		<h3 class="py-4 font-normal text-3xl">{{ __('app.share-title') }}</h3>
+		<p class="pt-1 pb-3">{{ __('app.share-info') }}</p>
+		<ul class="flex justify-around max-w-sm mx-auto">
+			<li><a href="" title="Facebook" class="diamond-border"><img class="diamond w-16 h-16 my-4 p-5" src="{{ asset('/img/icons/facebook.svg') }}" alt="Facebook logo"></a></li>
+			<li><a href="" title="Twitter" class="diamond-border"><img class="diamond w-16 h-16 my-4 p-5" src="{{ asset('/img/icons/twitter.svg') }}" alt="Twitter logo"></a></li>
+			<li><a href="" title="Google+" class="diamond-border"><img class="diamond w-16 h-16 my-4 p-5" src="{{ asset('/img/icons/google-plus.svg') }}" alt="Google+ logo"></a></li>
+			<li><a href="" title="Pinterest" class="diamond-border"><img class="diamond w-16 h-16 my-4 p-5" src="{{ asset('/img/icons/pinterest.svg') }}" alt="Pinterest logo"></a></li>
 		</ul>
 	</section>
-	<section class="bottom">
-		<div class="contact">
-			<p>{{ __('app.footer-contact-info') }}</p>
+	<section class="block flex flex-wrap justify-around mt-16 mb-8 max-w-lg mx-auto">
+		<div class="w-64 mb-8">
+			<p class="text-lg font-thin">{{ __('app.footer-contact-info') }}</p>
 			<a href="{{ route('contact') }}" class="button">{{ __('app.footer-contact-button') }}</a>
 		</div>
-		<nav class="menu">
-			<h4>{{ __('app.footer-menu-title') }}</h4>
+		<nav class="menu w-32 pb-16">
+			<h4 class="font-semibold pb-4">{{ __('app.footer-menu-title') }}</h4>
 			<ul>
-				<li><a href="{{ route('info') }}">{{ __('app.menu-info') }}</a></li>
-				<li><a href="{{ route('overview') }}">{{ __('app.menu-overview') }}</a></li>
-				<li><a href="{{ route('contact') }}">{{ __('app.menu-contact') }}</a></li>
+				<li><a href="{{ route('info') }}" class="underline">{{ __('app.menu-info') }}</a></li>
+				<li><a href="{{ route('overview') }}" class="underline">{{ __('app.menu-overview') }}</a></li>
+				<li><a href="{{ route('contact') }}" class="underline">{{ __('app.menu-contact') }}</a></li>
 			</ul>
 		</nav>
-		<div class="charity">
-			<p>{{ __('app.footer-charity-info') }}</p>
+		<div class="w-64">
+			<p class="text-lg font-thin">{{ __('app.footer-charity-info') }}</p>
 			<a href="{{ url('http://www.doof.vlaanderen/over-doof-vlaanderen') }}" class="button">{{ __('app.footer-charity-button') }}</a>
 		</div>
 	</section>
-	<p class="copywrite">{{ __('app.footer-copywrite',['year' => date("Y")]) }}</p>
+	<p class="p-2">{{ __('app.footer-copywrite',['year' => date("Y")]) }}</p>
 </footer>
 @endguest
-<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
