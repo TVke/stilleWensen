@@ -18,5 +18,11 @@
 			<input id="question" name="question">
 			<input type="submit" value="{{ __('app.contact-submit') }}" class="button">
 		</form>
+        <section>
+            <h3>{{ __('app.contact-text-question') }}</h3>
+            <p>{{ __('app.contact-text-answer') }}</p>
+            <p>{{ __('app.contact-link-context') }}</p>
+            <a href="{{ url('http://www.doof.vlaanderen') }}">www.doof.vlaanderen</a>
+        </section>
 	</section>
 @endsection

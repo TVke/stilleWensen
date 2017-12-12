@@ -1,0 +1,19 @@
+a{
+    @apply .no-underline .text-inherit
+}
+
+ul{
+    @apply .list-reset
+}
+
+h1, h2, h3, h4{
+    @apply .font-thin
+}
+
+h2 span{
+    @apply .text-teal-dark
+}
+
+strong{
+    @apply .font-semibold
+}
