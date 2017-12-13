@@ -47,7 +47,7 @@ var colors = {
     'inherit': 'inherit',
     'transparent': 'transparent',
 
-    'black': '#222b2f',
+    'black': '#24292F',
     'grey-darkest': '#364349',
     'grey-darker': '#596a73',
     'grey-dark': '#70818a',
@@ -855,7 +855,7 @@ module.exports = {
         minHeight: ['responsive'],
         minWidth: ['responsive'],
         negativeMargin: ['responsive'],
-        opacity: ['responsive'],
+        opacity: ['responsive','hover'],
         overflow: ['responsive'],
         padding: ['responsive'],
         pointerEvents: ['responsive'],
