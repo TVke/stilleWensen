@@ -23,7 +23,7 @@ class CreateWishersTable extends Migration
             $table->string('full_sound_slug');
             $table->string('soundless_video')->nullable()->default(null);
 	        $table->string('sound_video')->nullable()->default(null);
-            $table->boolean('allow_public')->default(false);
+            $table->boolean('allow_public')->default(0);
             $table->timestamp('sound_available');
             $table->timestamps();
         });

@@ -11,9 +11,28 @@
     @apply .bg-teal .absolute .pin
 }
 
-.button{
-    @apply .font-semibold .leading-none .text-sm .inline-block .bg-teal-darker .no-underline .p-3 .mx-auto .my-8
+
+.share{
+    perspective: 1000;
 }
+.share div{
+    transition: all .5s ease;
+}
+.share:hover div{
+    transform: rotateY(180deg);
+}
+.share-hover{
+    @apply .z-0
+}
+.share:hover div .share-hover{
+    @apply .z-20
+}
+
+
+.button{
+    @apply .font-semibold .leading-none .text-sm .inline-block .bg-teal-darker .no-underline .p-85 .mx-auto .my-8 .text-grey-light
+}
+
 
 .menu{
     @apply .block .w-64 .mx-auto
@@ -25,8 +44,38 @@
     @apply .block .leading-normal .text-base
 }
 .menu ul li a:hover{
-    @apply .text-grey
+    @apply .text-white
 }
 .menu ul li a.active,.menu ul li a.active:hover {
     @apply .text-teal-light
 }
+
+
+.pagination{
+    @apply .flex .justify-center .pb-8
+}
+
+.pagination a{
+    @apply .block .leading-normal .text-base .underline
+}
+
+.pagination a:hover{
+    @apply .text-white .no-underline
+}
+
+.pagination li{
+    @apply .w-32
+    }
+
+.pagination .disabled{
+    @apply .hidden
+}
+
+
+.switch{
+    @apply .text-grey-lighter .p-2
+}
+
+//.input{
+//    @apply .w-100
+//}
