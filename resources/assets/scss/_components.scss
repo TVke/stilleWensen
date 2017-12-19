@@ -32,6 +32,9 @@
 .button{
     @apply .font-semibold .leading-none .text-sm .inline-block .bg-teal-darker .no-underline .p-85 .mx-auto .my-8 .text-grey-light .uppercase
 }
+.button:hover{
+    @apply bg-teal-darkest
+}
 
 
 .menu{
@@ -80,4 +83,9 @@
 .inputfield:focus{
     outline: transparent;
     @apply .border-b-2 .border-t-0
+}
+
+
+p{
+    color: #adabab;
 }

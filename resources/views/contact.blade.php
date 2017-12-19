@@ -2,7 +2,7 @@
 @section('title', __('app.menu-contact').' - ')
 @section('content')
 	<h2 class="pt-16 pb-16 text-4xl">{{ __('app.contact-title') }}</h2>
-	<section class="flex justify-around">
+	<section class="flex justify-center">
 		<form action="{{ route('contact') }}" method="post" class="w-64">
 			{{ csrf_field() }}
 			<label class="block text-left" for="subject">{{ __('app.contact-subject') }}</label>
@@ -19,7 +19,7 @@
 			<input id="question" name="question" class="block inputfield">
 			<input type="submit" value="{{ __('app.contact-submit') }}" class="button block ml-0">
 		</form>
-        <section class="w-128 mt-16 mb-auto">
+        <section class="mt-16 mb-auto pt-8 pl-16 max-w-sm">
             <h3>{{ __('app.contact-text-question') }}</h3>
             <p class="text-lg font-light">{{ __('app.contact-text-answer') }}</p>
             <p class="pt-8 text-xs">{{ __('app.contact-link-context') }}:</p>
