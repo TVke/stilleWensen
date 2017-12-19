@@ -72,10 +72,12 @@
 }
 
 
-.switch{
-    @apply .text-grey-lighter .p-2
+.inputfield{
+    border-top-color: #011937;
+    @apply .my-2 .w-full .bg-transparent .border-b .text-grey-lighter .border-t
 }
 
-//.input{
-//    @apply .w-100
-//}
+.inputfield:focus{
+    outline: transparent;
+    @apply .border-b-2 .border-t-0
+}
