@@ -29,6 +29,9 @@ return [
 	'twist-title' => 'Maar...',
 	'twist-content' => "We merkten dan *niet iedereen* die wensen op een *evenwaardige manier kan ontvangen* en wouden dit probleem onder de aandacht brengen. ",
 
+    /* wishes */
+    'no-wishes' => 'Na de eerste filmdag komen hier de opgenomen wensen op. ',
+
 	/* += wishes details */
 	'wishes-title' => "Hoe klinken zo'n wensen voor een *dove*?",
 	'wishes-info' => "Tijdens de *feestdagen* vol warmte en verdraagzaamheid, wouden we ons *proberen verplaatsen* in hun *leefwereld* en zien *hoe* zij *deze dagen ervaren*. 
@@ -39,7 +42,7 @@ return [
 	/* contact-page */
 	'contact-title' => 'Heb je een vraag voor ons?',
 	'contact-info' => 'Heb je een vraag over het project of doofheid? Geen probleem, we antwoorden zo snel mogelijk op jouw vraag!',
-	'contact-site-title' => 'Bezoek ook de Doof Vlaandere website:',
+	'contact-site-title' => 'Bezoek ook de Doof Vlaandere website',
 
 	'contact-subject' => 'Onderwerp:',
 	'contact-subject-project' => 'HET PROJECT',
@@ -74,7 +77,7 @@ return [
 	'name-receiver' => 'Naam ontvanger:',
 	'email-receiver' => 'Email ontvanger:',
 	'form-public' => 'Deze video met geluid mag publiek gedeeld worden',
-	'submit-button' => 'STUUR IN*',
+	'submit-button' => 'STUUR IN',
 
 	/* terms & conditions */
 	'conditions' => "te gebruiken in werken in Karel de Grote klas omgevingen.",

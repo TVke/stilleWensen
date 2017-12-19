@@ -1,18 +1,18 @@
 @extends('layout')
 @section('title', __('app.menu-overview').' - ')
 @section('content')
-	<section>
-		<a href="{{ route('detail',['user_slug' => 'Lize']) }}">
-			<figure>
-				<img src="{{ asset('/img/vid.jpeg') }}" alt="Lize">
-				<figcaption>Lize</figcaption>
-			</figure>
-		</a>
-		<a href="{{ route('detail',['user_slug' => 'Lizer']) }}">
-			<figure>
-				<img src="{{ asset('/img/vid2.jpeg') }}" alt="Lizer">
-				<figcaption>Lizer</figcaption>
-			</figure>
-		</a>
-	</section>
+    @if($wishes->count() > 0)
+        <section class="flex justify-center flex-wrap max-w-xl mx-auto my-16 px-4">
+            @foreach($wishes as $wish)
+                <a href="{{ route('detail',['user_slug' => 'Lize']) }}" class="w-64 h-64">
+                    <figure class="diamond-border relative">
+                        <img src="{{ asset('/storage/img/info_foto.jpg') }}" alt="Lize" class="diamond w-64 h-64">
+                    </figure>
+                </a>
+            @endforeach
+        </section>
+        {{ $wishes->links() }}
+    @else
+        <h2 class="py-16">{{ __('app.no-wishes') }}</h2>
+    @endif
 @endsection

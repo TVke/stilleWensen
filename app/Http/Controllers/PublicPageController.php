@@ -24,7 +24,8 @@ class PublicPageController extends Controller
      */
     public function overview()
     {
-        return view('overview');
+        $wishes = Wisher::simplePaginate(9);
+        return view('overview',compact('wishes'));
     }
 
     /**
