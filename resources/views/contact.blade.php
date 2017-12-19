@@ -6,10 +6,11 @@
 		<form action="{{ route('contact') }}" method="post" class="w-64">
 			{{ csrf_field() }}
 			<label class="block text-left" for="subject">{{ __('app.contact-subject') }}</label>
-			<section class="flex border-2 text-xs mt-4">
-				<button id="subject" class="p-2 w-full bg-grey-light text-blue-darkest font-semibold">{{ __('app.contact-subject-project') }}</button>
-				<button class="text-grey-lighter p-2 w-full text-grey-light font-semibold">{{ __('app.contact-subject-charity') }}</button>
-			</section>
+            <input id="subject" name="subject" class="block inputfield">
+			{{--<section class="flex border-2 text-xs mt-4">--}}
+				{{--<button id="subject" class="p-2 w-full bg-grey-light text-blue-darkest font-semibold">{{ __('app.contact-subject-project') }}</button>--}}
+				{{--<button class="text-grey-lighter p-2 w-full text-grey-light font-semibold">{{ __('app.contact-subject-charity') }}</button>--}}
+			{{--</section>--}}
 			<label for="name" class="block text-left mt-8">{{ __('app.contact-name') }}</label>
 			<input id="name" name="name" class="block inputfield">
 			<label for="email" class="block text-left mt-8">{{ __('app.contact-email') }}</label>

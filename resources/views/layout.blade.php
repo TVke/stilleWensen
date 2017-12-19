@@ -15,11 +15,12 @@
 </head>
 <body class="bg-blue-darkest font-dosis font-normal text-grey-light text-center leading-normal">
 <header>
-    <a href="{{ route('info') }}" class="block text-center no-underline text-grey-light">
-        <img src="{{ asset('/img/laatste_logo.svg') }}" alt="logo" role="presentation" class="w-32 block m-auto relative up-15">
-        <h1 class="text-2xl leading-normal text-white">{{ __('app.title') }}</h1>
-    </a>
+
     @guest
+        <a href="{{ route('info') }}" class="block text-center no-underline text-grey-light">
+            <img src="{{ asset('/storage/img/laatste_logo.svg') }}" alt="logo" role="presentation" class="w-32 block m-auto relative up-15">
+            <h1 class="text-2xl leading-normal text-white">{{ __('app.title') }}</h1>
+        </a>
         <nav class="menu">
             <ul class="flex justify-around">
                 <li><a href="{{ route('info') }}" class="p-4{{ Route::currentRouteName()==="info"?' active':'' }}">{{ __('app.menu-info') }}</a></li>
@@ -28,9 +29,11 @@
             </ul>
         </nav>
     @else
+        <img src="{{ asset('/storage/img/laatste_logo.svg') }}" alt="logo" role="presentation" class="w-32 block m-auto relative up-15">
+        <h1 class="text-2xl leading-normal text-white">{{ __('app.title') }}</h1>
         <form action="{{ route('logout') }}" method="post">
             {{ csrf_field() }}
-            <input type="submit" value="{{ __('app.logout') }}">
+            <input type="submit" class="w-full py-4 text-blue-darkest bg-blue-darkest cursor-pointer" value="{{ __('app.logout') }}">
         </form>
     @endguest
 </header>
@@ -47,10 +50,10 @@
                     <a href="" title="Facebook" class="block relative share">
                         <div>
                             <div class="diamond-border my-4 z-10">
-                                <img class="diamond w-16 h-16 p-5" src="{{ asset('/img/icons/facebook.svg') }}" alt="Facebook logo">
+                                <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/facebook.svg') }}" alt="Facebook logo">
                             </div>
                             <div class="diamond-border share-hover absolute pin">
-                                <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/img/icons/facebook-invert.svg') }}" alt="Facebook logo">
+                                <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/facebook-invert.svg') }}" alt="Facebook logo">
                             </div>
                         </div>
                     </a>
@@ -59,10 +62,10 @@
                     <a href="" title="Twitter" class="block relative share">
                         <div>
                             <div class="diamond-border my-4 z-10">
-                                <img class="diamond w-16 h-16 p-5" src="{{ asset('/img/icons/twitter.svg') }}" alt="Twitter logo">
+                                <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/twitter.svg') }}" alt="Twitter logo">
                             </div>
                             <div class="diamond-border share-hover absolute pin">
-                                <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/img/icons/twitter-invert.svg') }}" alt="Twitter logo">
+                                <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/twitter-invert.svg') }}" alt="Twitter logo">
                             </div>
                         </div>
                     </a>
@@ -71,10 +74,10 @@
                     <a href="" title="Google+" class="block relative share">
                         <div>
                             <div class="diamond-border my-4 z-10">
-                                <img class="diamond w-16 h-16 p-5" src="{{ asset('/img/icons/google-plus.svg') }}" alt="Google+ logo">
+                                <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/google-plus.svg') }}" alt="Google+ logo">
                             </div>
                             <div class="diamond-border share-hover absolute pin">
-                                <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/img/icons/google-plus-invert.svg') }}" alt="Google+ logo">
+                                <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/google-plus-invert.svg') }}" alt="Google+ logo">
                             </div>
                         </div>
                     </a>
@@ -83,10 +86,10 @@
                     <a href="" title="Pinterest" class="block relative share">
                         <div>
                             <div class="diamond-border my-4 z-10">
-                                <img class="diamond w-16 h-16 p-5" src="{{ asset('/img/icons/pinterest.svg') }}" alt="Pinterest logo">
+                                <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/pinterest.svg') }}" alt="Pinterest logo">
                             </div>
                             <div class="diamond-border share-hover absolute pin">
-                                <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/img/icons/pinterest-invert.svg') }}" alt="Pinterest logo">
+                                <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/pinterest-invert.svg') }}" alt="Pinterest logo">
                             </div>
                         </div>
                     </a>

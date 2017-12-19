@@ -77,7 +77,7 @@ return [
 	'name-receiver' => 'Naam ontvanger:',
 	'email-receiver' => 'Email ontvanger:',
 	'form-public' => 'Deze video met geluid mag publiek gedeeld worden',
-	'submit-button' => 'STUUR IN*',
+	'submit-button' => 'STUUR IN',
 
 	/* terms & conditions */
 	'conditions' => "te gebruiken in werken in Karel de Grote klas omgevingen.",

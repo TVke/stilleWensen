@@ -6,7 +6,7 @@
             @foreach($wishes as $wish)
                 <a href="{{ route('detail',['user_slug' => 'Lize']) }}" class="w-64 h-64">
                     <figure class="diamond-border relative">
-                        <img src="{{ asset('/img/info_foto.jpg') }}" alt="Lize" class="diamond w-64 h-64">
+                        <img src="{{ asset('/storage/img/info_foto.jpg') }}" alt="Lize" class="diamond w-64 h-64">
                     </figure>
                 </a>
             @endforeach
