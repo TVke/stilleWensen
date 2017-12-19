@@ -2,7 +2,7 @@
 @section('content')
 	<div class="flex flex-wrap justify-center py-8 mx-auto">
         <div class="diamond-border max-w-xs my-auto mx-4 sm:mx-0">
-            <img class="diamond w-100" src="{{ asset('/img/info_foto.jpg') }}" alt="first">
+            <img class="diamond w-100" src="{{ asset('/storage/img/info_foto.jpg') }}" alt="first">
         </div>
 		<section class="max-w-sm p-6">
 			<h2 class="py-4">{{ __('app.first-title') }}</h2>
@@ -17,6 +17,7 @@
 	<section class="p-4 mx-auto max-w-2xl">
 		<h2 class="pb-8">{!! starToElement(__('app.wishes-title'),"span") !!}</h2>
 		<p class="pb-8">{!! starToElement(__('app.wishes-info'),"strong") !!}</p>
-		<img src="{{ asset('/img/info_foto.jpg') }}" alt="wishes">
+{{--		<img src="{{ asset('/img/info_foto.jpg') }}" alt="wishes">--}}
+        {{--<video class="w-full" src="{{ asset('/vid/test.mp4') }}"></video>--}}
 	</section>
 @endsection
