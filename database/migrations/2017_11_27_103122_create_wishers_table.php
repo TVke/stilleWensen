@@ -17,7 +17,7 @@ class CreateWishersTable extends Migration
             $table->increments('id');
             $table->string('sender_name');
             $table->string('sender_email');
-            $table->string('quit_slug');
+            $table->string('quiet_slug');
             $table->string('recipient_name');
 	        $table->string('recipient_email');
             $table->string('full_sound_slug');
