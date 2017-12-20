@@ -62,6 +62,8 @@ class PublicPageController extends Controller
             'content' => $request->input('content'),
         ]);
 
+        mail('tvke91@gmail.com',$request->subject,$request->input('content'),'From: contact@stillewensen.be');
+
         return view('contact')->with('success',null);
     }
 }
