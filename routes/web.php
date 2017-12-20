@@ -24,6 +24,7 @@ Route::post('/meir','Auth\LoginController@login');
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
 
 Route::get('/wisher', 'VideoController@create')->name('create_wisher');
-Route::post('/wisher/add', 'VideoController@store')->name('store_wisher');
+Route::post('/wisher', 'VideoController@store')->name('store_wisher');
+Route::get('/wisher/{sender}', 'VideoController@show')->name('show_wisher');
 Route::get('/wishers', 'VideoController@index')->name('wishers');
 Route::get('/terms','VideoController@terms')->name('terms');
