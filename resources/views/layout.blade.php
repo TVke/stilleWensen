@@ -17,7 +17,7 @@
 <header>
 
     @guest
-        <a href="{{ route('info') }}" class="block text-center no-underline text-grey-light">
+        <a href="{{ route('info') }}" class="block text-center no-underline text-grey-light w-64 mx-auto">
             <img src="{{ asset('/storage/img/laatste_logo.svg') }}" alt="logo" role="presentation" class="w-32 block m-auto relative up-15">
             <h1 class="text-2xl leading-normal text-white">{{ __('app.title') }}</h1>
         </a>
