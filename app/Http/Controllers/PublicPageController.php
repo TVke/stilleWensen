@@ -51,7 +51,7 @@ class PublicPageController extends Controller
     {
         $request->validate([
             'from_name' => 'required|string|min:2|max:255',
-            'from_email' => 'required|string|min:6|max:255',
+            'from_email' => 'required|email|min:6|max:255',
             'subject' => 'required|string|max:255',
             'question' => 'required|string|max:255',
         ]);

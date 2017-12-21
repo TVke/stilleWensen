@@ -14,7 +14,7 @@
 		<h2 class="pb-2">{{ __('app.twist-title') }}</h2>
 		<p class="pb-16">{!! starToElement(__('app.twist-content'),"strong") !!}</p>
 	</section>
-	<section class="p-4 mx-auto max-w-2xl">
+	<section class="p-4 mx-auto max-w-lg">
 		<h2 class="pb-8">{!! starToElement(__('app.wishes-title'),"span") !!}</h2>
 		<p class="pb-8">{!! starToElement(__('app.wishes-info'),"strong") !!}</p>
 {{--		<img src="{{ asset('/img/info_foto.jpg') }}" alt="wishes">--}}

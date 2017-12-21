@@ -12,10 +12,10 @@ class VideoController extends Controller
 	 * Create a new controller instance.
 	 *
 	 */
-	public function __construct()
-	{
-		$this->middleware('auth');
-	}
+//	public function __construct()
+//	{
+//		$this->middleware('auth');
+//	}
 
     /**
      * Display a listing of the resource.
@@ -58,7 +58,7 @@ class VideoController extends Controller
         $request->allow_public = ($request->allow_public)?1:0;
         $request->validate([
             'sender_name' => 'required|string|min:2|max:255',
-            'sender_email' => 'required|string|unique:wishers|min:6|max:255',
+            'sender_email' => 'required|email|unique:wishers|min:6|max:255',
             'recipient_name' => 'max:255',
             'recipient_email' => 'max:255',
             'allow_public' => 'boolean',

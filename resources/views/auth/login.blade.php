@@ -5,8 +5,8 @@
 		{{ csrf_field() }}
 		<label for="name" class="block mt-8{{ $errors->has('name') ? ' text-red' : '' }}">{{ __('auth.user_label') }}</label>
 		<input class="inputfield{{ $errors->has('name')?" error":"" }}" id="name" type="text" name="name" value="{{ old('name') }}" required autofocus>
-		@if ($errors->has('email'))
-			<p class="text-left text-red -mt-2 font-thin text-xs">{{ $errors->first('email') }}</p>
+		@if ($errors->has('name'))
+			<p class="text-left text-red -mt-2 font-thin text-xs">{{ $errors->first('name') }}</p>
 		@endif
 		<label for="password" class="block mt-8{{ $errors->has('password') ? ' text-red' : '' }}">{{ __('auth.password_label') }}</label>
 		<input class="inputfield{{ $errors->has('password')?" error":"" }}" id="password" type="password" name="password" required>

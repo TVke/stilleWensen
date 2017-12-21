@@ -5,7 +5,7 @@
         {{--<p>{{ $errors }}</p>--}}
         {{--@endif--}}
 	<h2 class="pt-16 pb-16 text-4xl">{{ __('app.contact-title') }}</h2>
-	<section class="flex justify-center">
+	<section class="flex flex-wrap justify-center">
 		<form action="{{ route('contact') }}" method="post" class="w-64">
 			{{ csrf_field() }}
 			<label class="block text-left{{ $errors->has('subject')?" text-red":"" }}" for="subject">{{ __('app.contact-subject') }}</label>
@@ -34,7 +34,7 @@
             @endif
 			<input type="submit" value="{{ __('app.contact-submit') }}" class="button block ml-0">
 		</form>
-        <section class="mt-16 mb-auto pt-8 pl-16 max-w-sm">
+        <section class="mt-16 mb-auto pt-8 px-8 max-w-sm">
             <h3>{{ __('app.contact-text-question') }}</h3>
             <p class="text-lg font-light">{{ __('app.contact-text-answer') }}</p>
             <p class="pt-8 text-xs">{{ __('app.contact-link-context') }}:</p>
