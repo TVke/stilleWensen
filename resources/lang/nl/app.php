@@ -22,22 +22,22 @@ return [
     'logout' => 'log uit',
 
 	/* info-page */
-	'first-title' => 'Elk jaar worden er tijdens de feestdagen nogal wat wensen uitgedeeld...',
-	'first-content' => "Zelf hadden we het geluk een aantal van *deze wensen* te mogen beluisteren en *vastleggen* tijdens een bezoekje aan de Meir in Antwerpen. Er zat enkel een *kleine twist* in de aflevering van de wensen...",
+	'first-title' => 'Elk jaar worden er tijdens de feestdagen een hele hoop wensen uitgedeeld...',
+    'first-content' => "Zelf hadden we het geluk een aantal van die *wensen* te mogen *vastleggen* op de Meir in Antwerpen. Benieuwd naar *wat* we met deze *opnames gedaan* hebben?",
 	'first-button' => 'BEKIJK ZE HIER',
 
-	'twist-title' => 'Maar...',
-	'twist-content' => "We merkten dan *niet iedereen* die wensen op een *evenwaardige manier kan ontvangen* en wouden dit probleem onder de aandacht brengen. ",
-
-    /* wishes */
-    'no-wishes' => 'Na de eerste filmdag komen hier de opgenomen wensen op. ',
+	'twist-title' => 'Waarom Stille Wensen?',
+    'twist-content' => "*Velen* zijn zich *niet bewust* van het feit dat *niet iedereen* zulke *wensen* op een *evenwaardige manier* kan *ontvangen*. Hier hopen we met ons project *verandering* in te *brengen*.",
 
 	/* += wishes details */
 	'wishes-title' => "Hoe klinken zo'n wensen voor een *dove*?",
-	'wishes-info' => "Tijdens de *feestdagen* vol warmte en verdraagzaamheid, wouden we ons *proberen verplaatsen* in hun *leefwereld* en zien *hoe* zij *deze dagen ervaren*. 
-	Rechts onderaan de video kan je *schakelen* tussen verschillende *gradaties van doofheid*.",
+    'wishes-info' => "De *feestdagen* zijn een periode vol *warmte* en *verdraagzaamheid*. Maar voor een dove betekenen de feestdagen ook veel *verwarring* en *chaos*. 
+    Via ons project laten we zoveel mogelijk *mensen ervaren* hoe het is om *doof* te zijn tijdens deze dagen en proberen we zo *meer begrip* voor doofheid te stimuleren.",
 
 	'wishes-personal' => "Bekijk hieronder :Sender's wens voor :Reciever.",
+
+    /* wishes */
+    'no-wishes' => 'Na de eerste filmdag komen hier de opgenomen wensen op. ',
 
 	/* contact-page */
 	'contact-title' => 'Heb je een vraag voor ons?',
