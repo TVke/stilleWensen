@@ -80,6 +80,9 @@ return [
 	'submit-button' => 'STUUR IN',
 
 	/* terms & conditions */
-	'conditions' => "te gebruiken in werken in Karel de Grote klas omgevingen.",
+    'condition-1' => "We zijn gerechtigd om de opgenomen video’s, zowel met geluid als zonder geluid, op één van de KdG Hogeschool campussen af te spelen. Ook zijn we gerechtigd de video’s zonder geluid op internet te zetten, namelijk op de website van het project (https://stillewensen.be). Deze video’s kunnen dan ook verspreid worden vanop de website naar social media.",
+    'condition-2' => "We zijn niet aansprakelijk voor eventueel misbruik van de video na zijn verspreiding.",
+    'condition-3' => "Hierbij geeft u uw portretrecht af aan de maker van de video.",
+    'condition-4' => "KdG is eigenaar van de opgenomen video’s.",
 
 ];
