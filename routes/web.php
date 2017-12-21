@@ -16,7 +16,7 @@ Route::view('/contact','contact')->name('contact');
 Route::get('/overzicht', 'PublicPageController@overview')->name('overview');
 Route::get('/video/{user_slug}','PublicPageController@video')->name('detail');
 Route::get('/video/{user_slug}/{sound_slug}','PublicPageController@sound_video')->name('detail_sound');
-Route::post('/contact','PublicPageController@contact');
+Route::post('/contact','PublicPageController@contact')->name('contact');
 
 /* Auth */
 Route::get('/meir','Auth\LoginController@showLoginForm')->name('login');

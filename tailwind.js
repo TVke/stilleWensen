@@ -89,7 +89,7 @@ var colors = {
     'green-lighter': '#a2f5bf',
     'green-lightest': '#e3fcec',
 
-    'teal-darkest': '#236966',
+    'teal-darkest': '#0D3331',
     'teal-darker': '#247c79', // donkerder voor buttons
     'teal-dark': '#3dbfbb', // kleur highlight in tekst
     'teal': '#43cfcc', // kleur randen
