@@ -33,7 +33,7 @@
     @apply .font-semibold .leading-none .text-sm .inline-block .bg-teal-darker .no-underline .p-85 .mx-auto .my-8 .text-grey-light .uppercase
 }
 .button:hover{
-    @apply bg-teal-darkest
+    background: lighten(#247c79,10%);
 }
 
 
@@ -74,6 +74,19 @@
     @apply .hidden
 }
 
+.wish-hover{
+    transition: all 0.5s ease;
+    transform: scale(0);
+    clip-path: polygon(50% 2px, calc(100% - 2px) 50%, 50% calc(100% - 2px), 2px 50%);
+    background: #43cfcc;
+    background: rgba(67, 207, 204, 0.7);
+    @apply .absolute .pin .w-48 .h-48 .m-auto .flex .opacity-0
+}
+
+a:hover .wish-hover{
+    transform: scale(1);
+    @apply .opacity-100
+}
 
 .inputfield{
     border-top-color: #011937;

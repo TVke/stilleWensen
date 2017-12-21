@@ -4,6 +4,7 @@ namespace stilleWensen\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use stilleWensen\Wisher;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -23,7 +24,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Route::bind('user_slug',function($slug){
+            return Wisher::where('quiet_slug',$slug)->firstOrFail();
+        });
 
         parent::boot();
     }
