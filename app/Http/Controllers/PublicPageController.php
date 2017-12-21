@@ -53,7 +53,7 @@ class PublicPageController extends Controller
             'from_name' => 'required|string|min:2|max:255',
             'from_email' => 'required|string|min:6|max:255',
             'subject' => 'required|string|max:255',
-            'content' => 'required|string|max:255',
+            'question' => 'required|string|max:255',
         ]);
 
         $new_mail = new Mail();
@@ -61,11 +61,11 @@ class PublicPageController extends Controller
             'from_name' => $request->from_name,
             'from_email' => $request->from_email,
             'subject' => $request->subject,
-            'content' => $request->input('content'),
+            'question' => $request->question,
         ]);
 
         mail('tvke91@gmail.com',
-            $request->subject,$request->input('content'),
+            $request->subject,$request->question,
             'From: contact@stillewensen.be'.'\r\n'.
             'Reply-To: '.$request->from_email);
 
