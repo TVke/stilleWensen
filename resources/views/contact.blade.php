@@ -9,28 +9,28 @@
 		<form action="{{ route('contact') }}" method="post" class="w-64">
 			{{ csrf_field() }}
 			<label class="block text-left{{ $errors->has('subject')?" text-red":"" }}" for="subject">{{ __('app.contact-subject') }}</label>
-            <input id="subject" name="subject" value="{{ old('subject') }}" class="block inputfield{{ $errors->has('subject')?" error":"" }}" required>
+            <input id="subject" name="subject" value="{{ old('subject') }}" class="inputfield{{ $errors->has('subject')?" error":"" }}" required>
 			{{--<section class="flex border-2 text-xs mt-4">--}}
 				{{--<button id="subject" class="p-2 w-full bg-grey-light text-blue-darkest font-semibold">{{ __('app.contact-subject-project') }}</button>--}}
 				{{--<button class="text-grey-lighter p-2 w-full text-grey-light font-semibold">{{ __('app.contact-subject-charity') }}</button>--}}
 			{{--</section>--}}
             @if ($errors->has('subject'))
-                <p class="text-left text-red">{{ $errors->first('subject') }}</p>
+                <p class="text-left text-red -mt-2 font-thin text-xs">{{ $errors->first('subject') }}</p>
             @endif
 			<label for="name" class="block text-left mt-8{{ $errors->has('from_name')?" text-red":"" }}">{{ __('app.contact-name') }}</label>
-			<input id="name" name="from_name" value="{{ old('from_name') }}" class="block inputfield{{ $errors->has('from_name')?" error":"" }}" required>
+			<input id="name" name="from_name" value="{{ old('from_name') }}" class="inputfield{{ $errors->has('from_name')?" error":"" }}" required>
             @if ($errors->has('from_name'))
-                <p class="text-left text-red">{{ $errors->first('from_name') }}</p>
+                <p class="text-left text-red -mt-2 font-thin text-xs">{{ $errors->first('from_name') }}</p>
             @endif
 			<label for="email" class="block text-left mt-8{{ $errors->has('from_email')?" text-red":"" }}">{{ __('app.contact-email') }}</label>
-			<input type="email" name="from_email" value="{{ old('from_email') }}" id="email" class="block inputfield{{ $errors->has('from_email')?" error":"" }}" required>
+			<input type="email" name="from_email" value="{{ old('from_email') }}" id="email" class="inputfield{{ $errors->has('from_email')?" error":"" }}" required>
             @if ($errors->has('from_email'))
-                <p class="text-left text-red -mt-2">{{ $errors->first('from_email') }}</p>
+                <p class="text-left text-red -mt-2 font-thin text-xs">{{ $errors->first('from_email') }}</p>
             @endif
 			<label for="question" class="block text-left mt-8{{ $errors->has('question')?" text-red":"" }}">{{ __('app.contact-question') }}</label>
-			<input id="question" name="question" value="{{ old('question') }}" class="block inputfield{{ $errors->has('question')?" error":"" }}" required>
+			<input id="question" name="question" value="{{ old('question') }}" class="inputfield{{ $errors->has('question')?" error":"" }}" required>
             @if ($errors->has('question'))
-                <p class="text-left text-red">{{ $errors->first('question') }}</p>
+                <p class="text-left text-red -mt-2 font-thin text-xs">{{ $errors->first('question') }}</p>
             @endif
 			<input type="submit" value="{{ __('app.contact-submit') }}" class="button block ml-0">
 		</form>

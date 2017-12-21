@@ -10,24 +10,24 @@
 				<label for="sender_name" class="text-left block mt-8{{ $errors->has('sender_name')?" text-red":"" }}">{{ __('app.name-sender') }}</label>
 				<input name="sender_name" id="sender_name" class="inputfield{{ $errors->has('sender_name')?" error":"" }}" value="{{ old('sender_name') }}" required>
                 @if ($errors->has('sender_name'))
-                    <p class="error">{{ $errors->first('sender_name') }}</p>
+                    <p class="text-left text-red -mt-2 font-thin text-xs">{{ $errors->first('sender_name') }}</p>
                 @endif
 				<label for="sender_email" class="text-left block mt-8{{ $errors->has('sender_email')?" text-red":"" }}">{{ __('app.email-sender') }}</label>
 				<input type="email" name="sender_email" id="sender_email" class="inputfield{{ $errors->has('sender_email')?" error":"" }}" value="{{ old('sender_email') }}" required>
                 @if ($errors->has('sender_email'))
-                    <p class="error">{{ $errors->first('sender_email') }}</p>
+                    <p class="text-left text-red -mt-2 font-thin text-xs">{{ $errors->first('sender_email') }}</p>
                 @endif
 			</section>
 			<section class="w-64">
 				<label for="recipient_name" class="text-left block mt-8{{ $errors->has('recipient_name')?" text-red":"" }}">{{ __('app.name-receiver') }}</label>
 				<input name="recipient_name" id="recipient_name" class="inputfield{{ $errors->has('recipient_name')?" error":"" }}" value="{{ old('recipient_name') }}">
                 @if ($errors->has('recipient_name'))
-                    <p class="error">{{ $errors->first('recipient_name') }}</p>
+                    <p class="text-left text-red -mt-2 font-thin text-xs">{{ $errors->first('recipient_name') }}</p>
                 @endif
 				<label for="recipient_email" class="text-left block mt-8{{ $errors->has('recipient_email')?" text-red":"" }}">{{ __('app.email-receiver') }}</label>
 				<input type="email" name="recipient_email" id="recipient_email" class="inputfield{{ $errors->has('recipient_email')?" error":"" }}" value="{{ old('recipient_email') }}">
                 @if ($errors->has('recipient_email'))
-                    <p class="error">{{ $errors->first('recipient_email') }}</p>
+                    <p class="text-left text-red -mt-2 font-thin text-xs">{{ $errors->first('recipient_email') }}</p>
                 @endif
 			</section>
 		</section>
