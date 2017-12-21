@@ -18,7 +18,7 @@ class CreateMailsTable extends Migration
             $table->string('from_name');
             $table->string('from_email');
             $table->string('subject');
-            $table->string('content');
+            $table->string('question');
             $table->timestamps();
         });
     }
