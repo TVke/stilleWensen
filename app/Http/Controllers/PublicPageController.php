@@ -25,18 +25,20 @@ class PublicPageController extends Controller
      */
     public function overview()
     {
-        $wishes = Wisher::allowedPublic()->simplePaginate(9);
+        $wishes = Wisher::withVideo()->simplePaginate(9);
         return view('overview',compact('wishes'));
     }
 
     /**
      * Show the video detail page.
      *
-     * @return \Illuminate\Http\Response
+     * @param Wisher $user_slug
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|Wisher
      */
     public function video(Wisher $user_slug)
     {
-        return view('detail');
+        $wisher = $user_slug;
+        return view('detail',compact('wisher'));
     }
 
     /**
@@ -62,7 +64,10 @@ class PublicPageController extends Controller
             'content' => $request->input('content'),
         ]);
 
-        mail('tvke91@gmail.com',$request->subject,$request->input('content'),'From: contact@stillewensen.be');
+        mail('tvke91@gmail.com',
+            $request->subject,$request->input('content'),
+            'From: contact@stillewensen.be'.'\r\n'.
+            'Reply-To: '.$request->from_email);
 
         return view('contact')->with('success',null);
     }
