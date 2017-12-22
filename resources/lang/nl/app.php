@@ -52,7 +52,7 @@ return [
 	'contact-question' => 'Vraag:',
 	'contact-submit' => 'STUUR',
 
-    'contact-success' => 'We beantwoorden je vraag zo snel mogelijk',
+    'contact-success' => 'We beantwoorden je vraag zo snel mogelijk.',
 
     'contact-text-question' => 'Heb je een vraag over het project of doofheid?',
     'contact-text-answer' => 'Geen probleem, we antwoorden zo snel mogelijk op jouw vraag!',
