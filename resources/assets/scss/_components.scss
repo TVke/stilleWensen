@@ -88,7 +88,7 @@ a:hover .wish-hover{
 
 .inputfield{
     border-top-color: #011937;
-    @apply .my-2 .w-full .bg-transparent .border-b .text-grey-lighter .border-t
+    @apply .my-2 .w-full .bg-transparent .border-b .text-grey-lighter .border-t .appearance-none .rounded-none
 }
 
 .inputfield.error{
