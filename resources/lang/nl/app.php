@@ -40,7 +40,7 @@ return [
     'no-wishes' => 'Na de eerste filmdag komen hier de opgenomen wensen op. ',
 
 	/* contact-page */
-	'contact-title' => 'Heb je een vraag voor ons?',
+    'contact-title' => 'Heb je een vraag voor ons?',
 	'contact-info' => 'Heb je een vraag over het project of doofheid? Geen probleem, we antwoorden zo snel mogelijk op jouw vraag!',
 	'contact-site-title' => 'Bezoek ook de Doof Vlaandere website',
 
@@ -51,6 +51,8 @@ return [
 	'contact-email' => 'Email:',
 	'contact-question' => 'Vraag:',
 	'contact-submit' => 'STUUR',
+
+    'contact-success' => 'We beantwoorden je vraag zo snel mogelijk',
 
     'contact-text-question' => 'Heb je een vraag over het project of doofheid?',
     'contact-text-answer' => 'Geen probleem, we antwoorden zo snel mogelijk op jouw vraag!',
@@ -78,6 +80,8 @@ return [
 	'email-receiver' => 'Email ontvanger:',
 	'form-public' => 'Deze video met geluid mag publiek gedeeld worden',
 	'submit-button' => 'STUUR IN',
+
+    'wisher-success' => 'Bedankt voor je steun.',
 
 	/* terms & conditions */
     'condition-1' => "We zijn gerechtigd om de opgenomen video’s, zowel met geluid als zonder geluid, op één van de KdG Hogeschool campussen af te spelen. Ook zijn we gerechtigd de video’s zonder geluid op internet te zetten, namelijk op de website van het project (https://stillewensen.be). Deze video’s kunnen dan ook verspreid worden vanop de website naar social media.",

@@ -95,7 +95,7 @@ class VideoController extends Controller
             'sound_available' => Carbon::now()->addWeek(),
         ]);
 
-        return view('wisher.add')->with('success',null);
+        return redirect(route('create_wisher'))->with('success',"success");
     }
 
     /**
