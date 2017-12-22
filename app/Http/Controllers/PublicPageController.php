@@ -49,6 +49,7 @@ class PublicPageController extends Controller
      */
     public function contact(Request $request)
     {
+//        return $request;
         $request->validate([
             'from_name' => 'required|string|min:2|max:255',
             'from_email' => 'required|email|min:6|max:255',
@@ -69,6 +70,6 @@ class PublicPageController extends Controller
             'From: contact@stillewensen.be'.'\r\n'.
             'Reply-To: '.$request->from_email);
 
-        return view('contact')->with('success',null);
+        return redirect(route('contact'))->with('success','success');
     }
 }

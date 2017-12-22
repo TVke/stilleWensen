@@ -1,11 +1,11 @@
 @extends('layout')
 @section('title', __('app.menu-contact').' - ')
 @section('content')
-    {{--@if($errors)--}}
-        {{--<p>{{ $errors }}</p>--}}
-        {{--@endif--}}
-	<h2 class="pt-16 pb-16 text-4xl">{{ __('app.contact-title') }}</h2>
-	<section class="flex flex-wrap justify-center">
+	<h2 class="pt-16 text-4xl">{{ __('app.contact-title') }}</h2>
+    @if(session()->has('success'))
+        <p class="text-green">{{ __('app.contact-success') }}</p>
+    @endif
+	<section class="pt-16 flex flex-wrap justify-center">
 		<form action="{{ route('contact') }}" method="post" class="w-64">
 			{{ csrf_field() }}
 			<label class="block text-left{{ $errors->has('subject')?" text-red":"" }}" for="subject">{{ __('app.contact-subject') }}</label>
