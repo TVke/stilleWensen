@@ -11,6 +11,8 @@
 |
 */
 
+Route::redirect('/public','/');
+
 Route::view('/','info')->name('info');
 Route::view('/contact','contact')->name('contact');
 Route::get('/overzicht', 'PublicPageController@overview')->name('overview');
