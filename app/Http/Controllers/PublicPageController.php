@@ -72,4 +72,18 @@ class PublicPageController extends Controller
 
         return redirect(route('contact'))->with('success','success');
     }
+
+    public function mailWisher(Wisher $wish){
+
+        if(mail(
+            'tvke91@gmail.com',
+            $request->subject,
+            $request->question,
+            'From: contact@stillewensen.be'.'\r\n'.
+            'Reply-To: '.$request->from_email
+        )){
+            return "gelukt!";
+        }
+        return "oeps, nog eens proberen";
+    }
 }
