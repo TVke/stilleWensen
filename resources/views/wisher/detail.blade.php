@@ -10,6 +10,6 @@
             <p>{!! starToElement(__('app.wishes-personal',['Sender' => $wisher->sender_name,'Reciever' => "iedereen"]),"strong") !!}</p>
         @endif
 	</section>
-    <video src="{{ asset('/storage/video/no-sound/'.$wisher->soundless_video) }}" controls></video>
+    <video src="{{ asset('/storage/video/sound/'.$wisher->full_sound_slug.".mp4") }}" controls></video>
     <script src="{{ asset('js/app.js') }}"></script>
 @endsection
