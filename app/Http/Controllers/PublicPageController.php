@@ -42,6 +42,18 @@ class PublicPageController extends Controller
     }
 
     /**
+     * Show the video detail page.
+     *
+     * @param Wisher $sound_slug
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|Wisher
+     */
+    public function sound_video(Wisher $sound_slug)
+    {
+        $wisher = $sound_slug;
+        return view('wisher.detail',compact('wisher'));
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
