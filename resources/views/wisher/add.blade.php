@@ -33,7 +33,6 @@
                 @endif
 			</section>
 		</section>
-		<label for="allow_public" class="text-left block max-w-lg mx-auto p-8"><input type="checkbox" class="mr-2" name="allow_public" id="allow_public" {{ old('allow_public')?"checked":"" }}> {{ __('app.form-public') }}</label>
 		<input type="submit" class="button mb-16" value="{{ __('app.submit-button') }}">
 
 	</form>
