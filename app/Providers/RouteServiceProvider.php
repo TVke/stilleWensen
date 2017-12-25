@@ -27,6 +27,10 @@ class RouteServiceProvider extends ServiceProvider
         Route::bind('user_slug',function($slug){
             return Wisher::where('quiet_slug',$slug)->firstOrFail();
         });
+        Route::bind('sound_slug',function($value,$route){
+            $user = $route->parameter('user_slug');
+            return $user->where('full_sound_slug',$value)->firstOrFail();
+        });
 
         parent::boot();
     }

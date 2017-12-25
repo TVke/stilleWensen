@@ -58,7 +58,7 @@ class VideoController extends Controller
         $request->allow_public = ($request->allow_public)?1:0;
         $request->validate([
             'sender_name' => 'required|string|min:2|max:255',
-            'sender_email' => 'required|string|unique:wishers|min:6|max:255',
+            'sender_email' => 'required|email|unique:wishers|min:6|max:255',
             'recipient_name' => 'max:255',
             'recipient_email' => 'max:255',
             'allow_public' => 'boolean',
@@ -95,7 +95,7 @@ class VideoController extends Controller
             'sound_available' => Carbon::now()->addWeek(),
         ]);
 
-        return view('wisher.add')->with('success',null);
+        return redirect(route('create_wisher'))->with('success',"success");
     }
 
     /**

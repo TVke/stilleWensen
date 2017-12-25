@@ -11,6 +11,11 @@
 |
 */
 
+Route::redirect('/public','/');
+
+Route::view('/mail','mail')->name('mail');
+Route::get('/mailen/{wish}','PublicPageController@mailWisher');
+
 Route::view('/','info')->name('info');
 Route::view('/contact','contact')->name('contact');
 Route::get('/overzicht', 'PublicPageController@overview')->name('overview');

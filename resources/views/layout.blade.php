@@ -6,18 +6,27 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title'){{ __('app.title') }}</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{--<meta name="description" content="Zelf hadden we het geluk een aantal van die wensen te mogen vastleggen op de Meir in Antwerpen. Benieuwd naar wat we met deze opnames gedaan hebben?">--}}
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6694a2">
-    <meta name="theme-color" content="#0E2640">
+    <meta name="theme-color" content="#0E2640"><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111539331-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111539331-1');
+    </script>
 </head>
 <body class="bg-blue-darkest font-dosis font-normal text-grey-light text-center leading-normal">
 <header>
 
     @guest
-        <a href="{{ route('info') }}" class="block text-center no-underline text-grey-light">
+        <a href="{{ route('info') }}" class="block text-center no-underline text-grey-light w-64 mx-auto">
             <img src="{{ asset('/storage/img/laatste_logo.svg') }}" alt="logo" role="presentation" class="w-32 block m-auto relative up-15">
             <h1 class="text-2xl leading-normal text-white">{{ __('app.title') }}</h1>
         </a>
@@ -48,6 +57,7 @@
             <ul class="flex justify-around max-w-sm mx-auto">
                 <li>
                     <a href="" title="Facebook" class="block relative share">
+{{--                    <a href="{{ (Route::currentRouteName()==="detail")?"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstillewensen.be%2F&amp ;src=sdkpreparse":"https://www.facebook.com/sharer/sharer.php?u= https%3A%2F%2Fstillewensen.be%2F&amp ;src=sdkpreparse" }}" title="Facebook" class="block relative share">--}}
                         <div>
                             <div class="diamond-border my-4 z-10">
                                 <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/facebook.svg') }}" alt="Facebook logo">
