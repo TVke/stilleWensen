@@ -13,13 +13,15 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6694a2">
     <meta name="theme-color" content="#0E2640">
     {{--twitter and facebook--}}
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@StilleWensen" />
-    <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:title" content="@yield('title'){{ __('app.title') }}" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@StilleWensen">
+    <meta property="fb:app_id" content="376898966054630">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="@yield('title'){{ __('app.title') }}">
     <meta name="description" content="{{ __('app.general_description') }}">
-    <meta property="og:description" content="{{ __('app.general_description') }}" />
-    {{--<meta property="og:image" content="{{ asset('') }}" />--}}
+    <meta property="og:description" content="{{ __('app.general_description') }}">
+    {{--<meta property="og:image" content="{{ asset('') }}">--}}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111539331-1"></script>
     <script>
