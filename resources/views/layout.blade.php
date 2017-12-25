@@ -65,7 +65,7 @@
             @unless(Route::currentRouteName()==="detail" || Route::currentRouteName()==="detail_sound")
                 <ul class="flex justify-around max-w-sm mx-auto">
                     <li>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.youtube.com/watch?v=GtkcPOoI3CY&amp ;src=sdkpreparse" title="Facebook" class="block relative share">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode("https://www.youtube.com/watch?v=GtkcPOoI3CY") }}&amp ;src=sdkpreparse" title="Facebook" class="block relative share">
                             <div>
                                 <div class="diamond-border my-4 z-10">
                                     <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/facebook.svg') }}" alt="Facebook logo">
@@ -77,7 +77,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" title="Twitter" class="block relative share">
+                        <a href="https://twitter.com/share?url={{ urlencode("https://www.youtube.com/watch?v=GtkcPOoI3CY") }}" title="Twitter" class="block relative share">
                             <div>
                                 <div class="diamond-border my-4 z-10">
                                     <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/twitter.svg') }}" alt="Twitter logo">
@@ -128,7 +128,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" title="Twitter" class="block relative share">
+                        <a href="https://twitter.com/share?url={{ urlencode(url()->current()) }}" title="Twitter" class="block relative share">
                             <div>
                                 <div class="diamond-border my-4 z-10">
                                     <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/twitter.svg') }}" alt="Twitter logo">
