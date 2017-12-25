@@ -21,6 +21,9 @@ return [
 
     'logout' => 'log uit',
 
+    /* description */
+    'general_description' => 'Een project om binding te krijgen met de doven gemeenschap',
+
 	/* info-page */
 	'first-title' => 'Elk jaar worden er tijdens de feestdagen een hele hoop wensen uitgedeeld...',
     'first-content' => "Zelf hadden we het geluk een aantal van die *wensen* te mogen *vastleggen* op de Meir in Antwerpen. Benieuwd naar *wat* we met deze *opnames gedaan* hebben?",
