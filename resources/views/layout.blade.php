@@ -13,7 +13,8 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6694a2">
     <meta name="theme-color" content="#0E2640">
     {{--twitter and facebook--}}
-    <meta name="twitter:card" content="{{ __('app.general_description') }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@StilleWensen" />
     <meta property="og:url" content="{{ url()->current() }}" />
     <meta property="og:title" content="@yield('title'){{ __('app.title') }}" />
     <meta name="description" content="{{ __('app.general_description') }}">
