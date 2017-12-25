@@ -6,13 +6,20 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title'){{ __('app.title') }}</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    {{--<meta name="description" content="Zelf hadden we het geluk een aantal van die wensen te mogen vastleggen op de Meir in Antwerpen. Benieuwd naar wat we met deze opnames gedaan hebben?">--}}
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6694a2">
-    <meta name="theme-color" content="#0E2640"><!-- Global site tag (gtag.js) - Google Analytics -->
+    <meta name="theme-color" content="#0E2640">
+    {{--twitter and facebook--}}
+    <meta name="twitter:card" content="{{ __('app.general_description') }}" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:title" content="@yield('title'){{ __('app.title') }}" />
+    <meta name="description" content="{{ __('app.general_description') }}">
+    <meta property="og:description" content="{{ __('app.general_description') }}" />
+    {{--<meta property="og:image" content="{{ asset('') }}" />--}}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111539331-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -54,57 +61,109 @@
         <section class="px-1 py-8 my-8 border-t border-b border-teal block">
             <h3 class="py-4 font-normal text-3xl">{{ __('app.share-title') }}</h3>
             <p class="pt-1 pb-3">{{ __('app.share-info') }}</p>
-            <ul class="flex justify-around max-w-sm mx-auto">
-                <li>
-                    <a href="" title="Facebook" class="block relative share">
-{{--                    <a href="{{ (Route::currentRouteName()==="detail")?"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstillewensen.be%2F&amp ;src=sdkpreparse":"https://www.facebook.com/sharer/sharer.php?u= https%3A%2F%2Fstillewensen.be%2F&amp ;src=sdkpreparse" }}" title="Facebook" class="block relative share">--}}
-                        <div>
-                            <div class="diamond-border my-4 z-10">
-                                <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/facebook.svg') }}" alt="Facebook logo">
+            @unless(Route::currentRouteName()==="detail" || Route::currentRouteName()==="detail_sound")
+                <ul class="flex justify-around max-w-sm mx-auto">
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.youtube.com/watch?v=GtkcPOoI3CY&amp ;src=sdkpreparse" title="Facebook" class="block relative share">
+                            <div>
+                                <div class="diamond-border my-4 z-10">
+                                    <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/facebook.svg') }}" alt="Facebook logo">
+                                </div>
+                                <div class="diamond-border share-hover absolute pin">
+                                    <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/facebook-invert.svg') }}" alt="Facebook logo">
+                                </div>
                             </div>
-                            <div class="diamond-border share-hover absolute pin">
-                                <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/facebook-invert.svg') }}" alt="Facebook logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Twitter" class="block relative share">
+                            <div>
+                                <div class="diamond-border my-4 z-10">
+                                    <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/twitter.svg') }}" alt="Twitter logo">
+                                </div>
+                                <div class="diamond-border share-hover absolute pin">
+                                    <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/twitter-invert.svg') }}" alt="Twitter logo">
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="" title="Twitter" class="block relative share">
-                        <div>
-                            <div class="diamond-border my-4 z-10">
-                                <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/twitter.svg') }}" alt="Twitter logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Google+" class="block relative share">
+                            <div>
+                                <div class="diamond-border my-4 z-10">
+                                    <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/google-plus.svg') }}" alt="Google+ logo">
+                                </div>
+                                <div class="diamond-border share-hover absolute pin">
+                                    <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/google-plus-invert.svg') }}" alt="Google+ logo">
+                                </div>
                             </div>
-                            <div class="diamond-border share-hover absolute pin">
-                                <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/twitter-invert.svg') }}" alt="Twitter logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Pinterest" class="block relative share">
+                            <div>
+                                <div class="diamond-border my-4 z-10">
+                                    <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/pinterest.svg') }}" alt="Pinterest logo">
+                                </div>
+                                <div class="diamond-border share-hover absolute pin">
+                                    <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/pinterest-invert.svg') }}" alt="Pinterest logo">
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="" title="Google+" class="block relative share">
-                        <div>
-                            <div class="diamond-border my-4 z-10">
-                                <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/google-plus.svg') }}" alt="Google+ logo">
+                        </a>
+                    </li>
+                </ul>
+            @else
+                <ul class="flex justify-around max-w-sm mx-auto">
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}&amp ;src=sdkpreparse" title="Facebook" class="block relative share">
+                            <div>
+                                <div class="diamond-border my-4 z-10">
+                                    <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/facebook.svg') }}" alt="Facebook logo">
+                                </div>
+                                <div class="diamond-border share-hover absolute pin">
+                                    <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/facebook-invert.svg') }}" alt="Facebook logo">
+                                </div>
                             </div>
-                            <div class="diamond-border share-hover absolute pin">
-                                <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/google-plus-invert.svg') }}" alt="Google+ logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Twitter" class="block relative share">
+                            <div>
+                                <div class="diamond-border my-4 z-10">
+                                    <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/twitter.svg') }}" alt="Twitter logo">
+                                </div>
+                                <div class="diamond-border share-hover absolute pin">
+                                    <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/twitter-invert.svg') }}" alt="Twitter logo">
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="" title="Pinterest" class="block relative share">
-                        <div>
-                            <div class="diamond-border my-4 z-10">
-                                <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/pinterest.svg') }}" alt="Pinterest logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Google+" class="block relative share">
+                            <div>
+                                <div class="diamond-border my-4 z-10">
+                                    <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/google-plus.svg') }}" alt="Google+ logo">
+                                </div>
+                                <div class="diamond-border share-hover absolute pin">
+                                    <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/google-plus-invert.svg') }}" alt="Google+ logo">
+                                </div>
                             </div>
-                            <div class="diamond-border share-hover absolute pin">
-                                <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/pinterest-invert.svg') }}" alt="Pinterest logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Pinterest" class="block relative share">
+                            <div>
+                                <div class="diamond-border my-4 z-10">
+                                    <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/pinterest.svg') }}" alt="Pinterest logo">
+                                </div>
+                                <div class="diamond-border share-hover absolute pin">
+                                    <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/pinterest-invert.svg') }}" alt="Pinterest logo">
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+                        </a>
+                    </li>
+                </ul>
+            @endunless
         </section>
         <section class="block flex flex-wrap justify-around mt-16 mb-8 max-w-lg mx-auto">
             <div class="w-64 mb-8">

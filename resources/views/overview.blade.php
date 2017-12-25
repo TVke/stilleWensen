@@ -6,7 +6,7 @@
             @foreach($wishes as $wish)
                 <a href="{{ route('detail',['user_slug' => $wish->quiet_slug]) }}" class="relative w-64 h-64">
                     <figure class="diamond-border relative">
-                        <video src="{{ asset('/storage/video/no-sound/'.$wish->soundless_video) }}" class="diamond w-64 h-64" autoplay></video>
+                        <video src="{{ asset('/storage/video/no-sound/small/'.$wish->soundless_video) }}" class="diamond w-64 h-64" muted autoplay loop></video>
                     </figure>
                     <div class="wish-hover">
                         <svg class="w-16 h-16 m-auto block p-4" xmlns="http://www.w3.org/2000/svg" width="257" height="295.3" viewBox="0 0 257 295.3"><path fill="#fff" d="M1 .7l254.9 147.2-254.9 147.2z"/></svg>

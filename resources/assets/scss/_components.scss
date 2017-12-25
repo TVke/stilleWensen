@@ -1,14 +1,20 @@
-.diamond{
+.clip-diamond{
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.clip-diamond-2{
     clip-path: polygon(50% 2px, calc(100% - 2px) 50%, 50% calc(100% - 2px), 2px 50%);
-    @apply .block .bg-blue-darkest .relative .border .border-teal .border-solid
+}
+
+
+.diamond{
+    @apply .block .bg-blue-darkest .relative .border .border-teal .border-solid .clip-diamond-2
 }
 .diamond-border{
     @apply .block .relative
 }
 .diamond-border::before{
     content: "";
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    @apply .bg-teal .absolute .pin
+    @apply .bg-teal .absolute .pin .clip-diamond
 }
 
 
@@ -77,8 +83,7 @@
 .wish-hover{
     transition: all 0.5s ease;
     transform: scale(0);
-    clip-path: polygon(50% 2px, calc(100% - 2px) 50%, 50% calc(100% - 2px), 2px 50%);
-    @apply .absolute .pin .w-48 .h-48 .m-auto .flex .opacity-0 .bg-teal
+    @apply .absolute .pin .w-48 .h-48 .m-auto .flex .opacity-0 .bg-teal .clip-diamond-2
 }
 
 a:hover .wish-hover{
