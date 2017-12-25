@@ -27,6 +27,9 @@
     @elseif(Route::currentRouteName()==="detail" || Route::currentRouteName()==="detail_sound")
         <meta property="og:image" content="{{ asset('/storage/img/videos/'.substr($wisher->soundless_video,0,-4).'.jpg') }}">
         <meta property="og:image:alt" content="{{ $wisher->sender_name }}">
+        <meta property="og:image:width" content="1880">
+        <meta property="og:image:height" content="1058">
+        og:image:width
     @else
         <meta property="og:image" content="{{ asset('/storage/img/social_logo.png') }}">
         <meta property="og:image:alt" content="Stille Wensen Logo">
