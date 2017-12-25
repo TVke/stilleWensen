@@ -9,7 +9,7 @@
         @else
             <p class="pb-8">{!! starToElement(__('app.wishes-personal',['Sender' => $wisher->sender_name,'Reciever' => "iedereen"]),"strong") !!}</p>
         @endif
-        <video class="w-full" src="{{ asset('/storage/video/sound/'.$wisher->full_sound_slug.".mp4") }}" controls></video>
+        <video class="w-full" src="{{ asset('/storage/video/sound/'.$wisher->full_sound_slug.".mp4") }}" poster="{{ asset('/storage/img/videos/'.substr($wisher->soundless_video,0,-4).'.jpg') }}" controls></video>
     </section>
     <script src="{{ asset('js/app.js') }}"></script>
 @endsection

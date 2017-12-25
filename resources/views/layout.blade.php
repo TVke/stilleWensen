@@ -12,7 +12,7 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6694a2">
     <meta name="theme-color" content="#0E2640">
-    {{--twitter and facebook--}}
+    <!-- twitter and facebook -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@StilleWensen">
     <meta property="fb:app_id" content="376898966054630">
@@ -21,14 +21,22 @@
     <meta property="og:title" content="@yield('title'){{ __('app.title') }}">
     <meta name="description" content="{{ __('app.general_description') }}">
     <meta property="og:description" content="{{ __('app.general_description') }}">
-    {{--<meta property="og:image" content="{{ asset('') }}">--}}
+    @if(Route::currentRouteName()==="info")
+        <meta property="og:image" content="https://i1.ytimg.com/vi/GtkcPOoI3CY/hqdefault.jpg">
+        <meta property="og:image:alt" content="Voorstelling project: Stille Wensen">
+    @elseif(Route::currentRouteName()==="detail" || Route::currentRouteName()==="detail_sound")
+        <meta property="og:image" content="{{ asset('/storage/img/videos/'.substr($wisher->soundless_video,0,-4).'.jpg') }}">
+        <meta property="og:image:alt" content="{{ $wisher->sender_name }}">
+    @else
+        <meta property="og:image" content="{{ asset('/storage/img/social_logo.png') }}">
+        <meta property="og:image:alt" content="Stille Wensen Logo">
+    @endif
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111539331-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-111539331-1');
     </script>
 </head>
