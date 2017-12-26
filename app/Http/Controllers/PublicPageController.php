@@ -159,7 +159,7 @@ class PublicPageController extends Controller
                                 <tbody>
                                 <tr>
                                     <td style='color:#c2c1c1;text-align:center;'>
-                                        <a bgcolor='#247c79' width='150px' href=\"https://stillewensen.be/".$wish->quiet_slug."/".$wish->full_sound_slug."\" style='display:block;width:150px;margin:10px auto;color:#c2c1c1;background:#247c79;padding:15px;text-decoration:none;'>Je video met geluid</a>
+                                        <a bgcolor='#247c79' width='150px' href=\"https://stillewensen.be/video/".$wish->quiet_slug."/".$wish->full_sound_slug."\" style='display:block;width:150px;margin:10px auto;color:#c2c1c1;background:#247c79;padding:10px 0;text-decoration:none;'>Je video met geluid</a>
                                     </td>
                                 </tr>
                                 <tr>
