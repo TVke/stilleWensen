@@ -86,7 +86,7 @@ class PublicPageController extends Controller
     }
 
     public function onlineMail(Wisher $wish){
-        return view('mail',compact($wish));
+        return view('mail',compact('wish'));
     }
 
     public function mailWisher(Wisher $wish){
