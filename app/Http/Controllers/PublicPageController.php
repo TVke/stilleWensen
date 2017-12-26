@@ -168,7 +168,7 @@ class PublicPageController extends Controller
                                 </tr>
                                 <tr>
                                     <td style='color:#c2c1c1;text-align:center;'>
-                                        <a href=\"https://stillewensen.be/overzicht\" style='display:block;height:100px;color:#c2c1c1;padding-bottom: 100px'>Bekijk alle wensen</a>
+                                        <a href=\"https://stillewensen.be/overzicht\" style='display:block;color:#c2c1c1;padding-bottom: 100px'>Bekijk alle wensen</a>
                                     </td>
                                 </tr>
                                 </tbody>
