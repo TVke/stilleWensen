@@ -14,11 +14,11 @@
 Route::redirect('/public','/');
 
 Route::get('/mail/{wish}','PublicPageController@onlineMail');
-Route::get('/mailen/{wish}','PublicPageController@mailWisher');
+//Route::get('/mailen/{wish}','PublicPageController@mailWisher');
 
 
 Route::get('/mail-en/{wish}','PublicPageController@enOnlineMail');
-Route::get('/mailen-en/{wish}','PublicPageController@enMailWisher');
+//Route::get('/mailen-en/{wish}','PublicPageController@enMailWisher');
 
 Route::view('/','info')->name('info');
 Route::view('/contact','contact')->name('contact');
