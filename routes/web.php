@@ -13,7 +13,7 @@
 
 Route::redirect('/public','/');
 
-Route::view('/mail','mail')->name('mail');
+Route::get('/mail/{wish}','PublicPageController@onlineMail');
 Route::get('/mailen/{wish}','PublicPageController@mailWisher');
 
 Route::view('/','info')->name('info');

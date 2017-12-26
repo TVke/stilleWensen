@@ -85,6 +85,10 @@ class PublicPageController extends Controller
         return redirect(route('contact'))->with('success','success');
     }
 
+    public function onlineMail(Wisher $wish){
+        return view('mail',compact($wish));
+    }
+
     public function mailWisher(Wisher $wish){
 
         $HTMLcontent = "<html>
@@ -118,7 +122,7 @@ class PublicPageController extends Controller
                                 <tbody>
                                 <tr bgcolor='#011937'>
                                     <td style='text-align:center;padding:10px;color:#c2c1c1;'>
-                                        <a href='https://stillewensen.be/mail/' style='color:#c2c1c1;'>Bekijk deze mail online</a>
+                                        <a href='https://stillewensen.be/mail/".$wish->id."' style='color:#c2c1c1;'>Bekijk deze mail online</a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -197,7 +201,7 @@ class PublicPageController extends Controller
 
         if(mail(
             'tvke91@gmail.com',
-            "Stille Wensen video",
+            "Stille Wensen video :".$wish->sender_email,
             $HTMLcontent,
             "From: contact@stillewensen.be\r\nMIME-Version: 1.0\r\nContent-Type: text/html; charset=ISO-8859-1\r\n"
         )){
