@@ -79,8 +79,8 @@ class PublicPageController extends Controller
 
         mail('tvke91@gmail.com',
             $request->subject,$request->question,
-            'From: contact@stillewensen.be'.'\r\n'.
-            'Reply-To: '.$request->from_email);
+            "From: contact@stillewensen.be"."\r\n".
+            "Reply-To: ".$request->from_email);
 
         return redirect(route('contact'))->with('success','success');
     }
@@ -124,12 +124,12 @@ class PublicPageController extends Controller
                                 </tbody>
                             </table>
                             <!-- top bar -->
-                            <a href='https://stillewensen.be/'>
+                            <a href=\"https://stillewensen.be/\">
                                 <table width='100%' align='center' cellpadding='0' cellspacing='0' border='0'>
                                     <tbody>
                                     <tr>
                                         <td>
-                                            <img src='https://stillewensen.be/storage/img/logo.png' alt='Stille Wensen' width='128px' height='78px' style='display:block;margin:0 auto;width:128px;color:#c2c1c1;'>
+                                            <img src=\"https://stillewensen.be/storage/img/logo.png\" alt='Stille Wensen' width='128px' height='78px' style='display:block;margin:0 auto;width:128px;color:#c2c1c1;'>
                                         </td>
                                     </tr>
                                     <tr>
@@ -159,12 +159,12 @@ class PublicPageController extends Controller
                                 <tbody>
                                 <tr>
                                     <td style='color:#c2c1c1;text-align:center;'>
-                                        <a bgcolor='#247c79' width='150px' href='https://stillewensen.be/' style='display:block;width:150px;margin:10px auto;color:#c2c1c1;background:#247c79;padding:15px;text-decoration:none;'>Je video met geluid</a>
+                                        <a bgcolor='#247c79' width='150px' href=\"https://stillewensen.be/".$wish->quiet_slug."/".$wish->full_sound_slug."\" style='display:block;width:150px;margin:10px auto;color:#c2c1c1;background:#247c79;padding:15px;text-decoration:none;'>Je video met geluid</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style='color:#c2c1c1;text-align:center;'>
-                                        <a bgcolor='#247c79' href='https://stillewensen.be/overzicht' style='display:block;color:#c2c1c1;'>Bekijk alle wensen</a>
+                                        <a bgcolor='#247c79' href=\"https://stillewensen.be/overzicht\" style='display:block;color:#c2c1c1;'>Bekijk alle wensen</a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -199,7 +199,7 @@ class PublicPageController extends Controller
             'tvke91@gmail.com',
             "Stille Wensen video",
             $HTMLcontent,
-            'From: contact@stillewensen.be'
+            "From: contact@stillewensen.be\r\nMIME-Version: 1.0\r\nContent-Type: text/html; charset=ISO-8859-1\r\n"
         )){
             return "gelukt!";
         }
