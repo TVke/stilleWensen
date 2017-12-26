@@ -325,8 +325,7 @@ class PublicPageController extends Controller
 
 
         if(mail(
-            "tvke91@gmail.com",
-//            $wish->sender_email,
+            $wish->sender_email,
             "Silent Wishes video",
             $HTMLcontent,
             "From: contact@stillewensen.be\r\nMIME-Version: 1.0\r\nContent-Type: text/html; charset=ISO-8859-1\r\n"
