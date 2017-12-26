@@ -99,16 +99,16 @@ class PublicPageController extends Controller
 <!--[if (gte mso 9)|(IE)]>
 <table width='100%' align='center' cellpadding='0' cellspacing='0' border='0'>
     <tbody>
-    <tr>
+    <tr bgcolor='#011937'>
         <td>
 <![endif]-->
 <table class='container' width='100%' cellspacing='0' cellpadding='0' style='max-width:100%;'>
     <tbody>
-    <tr>
+    <tr bgcolor='#011937'>
         <td style='text-align:left;vertical-align:top;font-size:0;'>
             <!--[if (gte mso 9)|(IE)]>
             <table width='100%' align='center' cellpadding='0' cellspacing='0' border='0'>
-                <tr>
+                <tr bgcolor='#011937'>
                     <td>
             <![endif]-->
             <div style='width:100%;display:inline-block;vertical-align:top;'>
@@ -121,7 +121,7 @@ class PublicPageController extends Controller
                             <table width='100%' align='center' cellpadding='0' cellspacing='0' border='0'>
                                 <tbody>
                                 <tr bgcolor='#011937'>
-                                    <td style='text-align:center;padding:10px;color:#c2c1c1;'>
+                                    <td style='text-align: center;padding: 10px;color: #c2c1c1;'>
                                         <a href='https://stillewensen.be/mail/".$wish->id."' style='color:#c2c1c1;'>Bekijk deze mail online</a>
                                     </td>
                                 </tr>
@@ -131,14 +131,14 @@ class PublicPageController extends Controller
                             <a href=\"https://stillewensen.be/\">
                                 <table width='100%' align='center' cellpadding='0' cellspacing='0' border='0'>
                                     <tbody>
-                                    <tr  bgcolor='#011937'>
+                                    <tr bgcolor='#011937'>
                                         <td>
                                             <img src=\"https://stillewensen.be/storage/img/logo.png\" alt='Stille Wensen' width='128px' height='78px' style='display:block;margin:0 auto;width:128px;color:#c2c1c1;'>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <h1 style=\"font-family:'Dosis',Helvetica,Arial,sans-serif;color:white;text-align:center;font-weight:lighter;\">Stille Wensen</h1>
+                                            <h1 style=\"font-family: 'Dosis',Helvetica,Arial,sans-serif;color:white;text-align:center;font-weight:lighter;\">Stille Wensen</h1>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -147,7 +147,7 @@ class PublicPageController extends Controller
 
                             <table width='100%' align='center' cellpadding='0' cellspacing='0' border='0' style='padding:20px;'>
                                 <tbody>
-                                <tr  bgcolor='#011937'>
+                                <tr bgcolor='#011937'>
                                     <td style='color:#c2c1c1;text-align:center;'>
                                         Bedankt voor je deelname!
                                     </td>
@@ -163,12 +163,12 @@ class PublicPageController extends Controller
                                 <tbody>
                                 <tr bgcolor='#011937'>
                                     <td style='color:#c2c1c1;text-align:center;'>
-                                        <a bgcolor='#247c79' width='150px' href=\"https://stillewensen.be/video/".$wish->quiet_slug."/".$wish->full_sound_slug."\" style='display:block;width:150px;margin:10px auto;color:#c2c1c1;background:#247c79;padding:10px 0;text-decoration:none;'>Je video met geluid</a>
+                                        <a href=\"https://stillewensen.be/video/".$wish->quiet_slug."/".$wish->full_sound_slug."\" style='display:block;width:150px;margin:10px auto;color:#c2c1c1;background:#247c79;padding:10px 0;text-decoration:none;'>Je video met geluid</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style='color:#c2c1c1;text-align:center;'>
-                                        <a bgcolor='#247c79' href=\"https://stillewensen.be/overzicht\" style='display:block;color:#c2c1c1;'>Bekijk alle wensen</a>
+                                        <a href=\"https://stillewensen.be/overzicht\" style='display:block;color:#c2c1c1;padding-bottom: 100px'>Bekijk alle wensen</a>
                                     </td>
                                 </tr>
                                 </tbody>

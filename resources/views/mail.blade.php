@@ -75,7 +75,7 @@
                                 </tr>
                                 <tr>
                                     <td style='color:#c2c1c1;text-align:center;'>
-                                        <a bgcolor='#247c79' href='https://stillewensen.be/overzicht' style='display:block;color:#c2c1c1;'>Bekijk alle wensen</a>
+                                        <a bgcolor='#247c79' href='https://stillewensen.be/overzicht' style='display:block;color:#c2c1c1;padding-bottom: 100px'>Bekijk alle wensen</a>
                                     </td>
                                 </tr>
                                 </tbody>
