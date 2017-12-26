@@ -21,7 +21,7 @@ class PublicPageController extends Controller
     /**
      * Show the overview page.
      *
-     * @return \Illuminate\Http\Response
+     *
      */
     public function overview()
     {
