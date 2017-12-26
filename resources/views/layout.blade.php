@@ -112,18 +112,18 @@
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="https://www.pinterest.com/pin/create/button/?url=https%3A//www.youtube.com/attribution_link%3Fa%3Dhd3dHS0DKbg%26u%3D%252Fwatch%253Fv%253DGtkcPOoI3CY%2526feature%253Dshare&description=Voorstelling%20project%3A%20Stille%20Wensen&is_video=true&media=https%3A//i.ytimg.com/vi/GtkcPOoI3CY/maxresdefault.jpg" title="Pinterest" class="block relative share">
-                            <div>
-                                <div class="diamond-border my-4 z-10">
-                                    <img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/pinterest.svg') }}" alt="Pinterest logo">
-                                </div>
-                                <div class="diamond-border share-hover absolute pin">
-                                    <img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/pinterest-invert.svg') }}" alt="Pinterest logo">
-                                </div>
-                            </div>
-                        </a>
-                    </li>
+                    {{--<li>--}}
+                        {{--<a href="https://www.pinterest.com/pin/create/button/?url=https%3A//www.youtube.com/attribution_link%3Fa%3Dhd3dHS0DKbg%26u%3D%252Fwatch%253Fv%253DGtkcPOoI3CY%2526feature%253Dshare&description=Voorstelling%20project%3A%20Stille%20Wensen&is_video=true&media=https%3A//i.ytimg.com/vi/GtkcPOoI3CY/maxresdefault.jpg" title="Pinterest" class="block relative share">--}}
+                            {{--<div>--}}
+                                {{--<div class="diamond-border my-4 z-10">--}}
+                                    {{--<img class="diamond w-16 h-16 p-5" src="{{ asset('/storage/img/icons/pinterest.svg') }}" alt="Pinterest logo">--}}
+                                {{--</div>--}}
+                                {{--<div class="diamond-border share-hover absolute pin">--}}
+                                    {{--<img class="diamond w-16 h-16 p-5 bg-teal" src="{{ asset('/storage/img/icons/pinterest-invert.svg') }}" alt="Pinterest logo">--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
                 </ul>
             @else
                 <ul class="flex justify-around max-w-sm mx-auto">
