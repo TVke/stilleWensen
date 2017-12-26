@@ -29,7 +29,7 @@
                                 <tbody>
                                 <tr bgcolor='#011937'>
                                     <td style='text-align:center;padding:10px;color:#c2c1c1;'>
-                                        <a href='https://stillewensen.be/mail/' style='color:#c2c1c1;'>Bekijk deze mail online</a>
+                                        <a href='https://stillewensen.be/mail/{{ $wish->id }}' style='color:#c2c1c1;'>Bekijk deze mail online</a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -70,7 +70,7 @@
                                 <tbody>
                                 <tr>
                                     <td style='color:#c2c1c1;text-align:center;'>
-                                        <a bgcolor='#247c79' width='150px' href='https://stillewensen.be/' style='display:block;width:150px;margin:10px auto;color:#c2c1c1;background:#247c79;padding:15px;text-decoration:none;'>Je video met geluid</a>
+                                        <a bgcolor='#247c79' width='150px' href='https://stillewensen.be/video/{{ $wish->quiet_slug }}/{{ $wish->full_sound_slug }}' style='display:block;width:150px;margin:10px auto;color:#c2c1c1;background:#247c79;padding:15px;text-decoration:none;'>Je video met geluid</a>
                                     </td>
                                 </tr>
                                 <tr>
