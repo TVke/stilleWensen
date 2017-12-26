@@ -1,4 +1,5 @@
 <html>
+<title>Stille Wensen</title>
 <body bgcolor='#011937'>
 <style>
     *,html{padding:0;margin:0;}
