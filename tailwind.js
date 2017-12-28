@@ -99,7 +99,7 @@ var colors = {
 
     'blue-darkest': '#011937', // algemene donker blauwe kleur
     'blue-darker': '#1c3d5a',
-    'blue-dark': '#2779bd',
+    'blue-dark': '#2b5d9b', // diamond background
     'blue': '#3490dc',
     'blue-light': '#6cb2eb',
     'blue-lighter': '#bcdefa',
