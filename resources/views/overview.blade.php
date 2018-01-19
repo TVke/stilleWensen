@@ -5,7 +5,7 @@
         <section class="flex justify-center flex-wrap max-w-xl mx-auto my-16 px-4">
             @foreach($wishes as $wish)
                 <a href="{{ route('detail',['user_slug' => $wish->quiet_slug]) }}" class="relative w-64 h-64">
-                    <figure class="diamond-border relative">
+                    <figure class="relative">
                         <video src="{{ asset('/storage/video/no-sound/small/'.$wish->soundless_video) }}" class="diamond w-64 h-64 bg-blue-dark" muted autoplay loop></video>
                     </figure>
                     <div class="wish-hover">

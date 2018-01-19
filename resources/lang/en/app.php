@@ -13,7 +13,7 @@ return [
     */
 
     /* general */
-    'title' => 'Stille Wensen',
+    'title' => 'Silent Wishes',
 
     'menu-info' => 'Info',
 	'menu-overview' => 'Wensen',
@@ -22,7 +22,7 @@ return [
     'logout' => 'log uit',
 
     /* description */
-    'general_description' => 'Een project om binding te krijgen met de doven gemeenschap.',
+    'general_description' => 'Een project om binding te krijgen met de doven gemeenschap',
     'overview_description' => 'Alle opgenomen wensen zijn geluidloos gemaakt en enkel de wenser zelf heeft de link naar de video met geluid.',
     'contact_description' => 'Op deze pagina kan je al je vragen kwijt over doven en over ons project.',
 

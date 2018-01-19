@@ -19,8 +19,16 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="@yield('title'){{ __('app.title') }}">
-    <meta name="description" content="{{ __('app.general_description') }}">
-    <meta property="og:description" content="{{ __('app.general_description') }}">
+    @if(Route::currentRouteName() === "overview" || Route::currentRouteName() === "detail" || Route::currentRouteName()==="detail_sound")
+        <meta name="description" content="{{ __('app.overview_description') }}">
+    <meta property="og:description" content="{{ __('app.overview_description') }}">
+    @elseif(Route::currentRouteName() === "contact")
+        <meta name="description" content="{{ __('app.contact_description') }}">
+    <meta property="og:description" content="{{ __('app.contact_description') }}">
+    @else
+        <meta name="description" content="{{ __('app.general_description') }}">
+        <meta property="og:description" content="{{ __('app.general_description') }}">
+    @endif
     @if(Route::currentRouteName()==="info")
         <meta property="og:image" content="https://i1.ytimg.com/vi/GtkcPOoI3CY/hqdefault.jpg">
         <meta property="og:image:alt" content="Voorstelling project: Stille Wensen">
@@ -33,6 +41,9 @@
         <meta property="og:image" content="{{ asset('/storage/img/social_logo.png') }}">
         <meta property="og:image:alt" content="Stille Wensen Logo">
     @endif
+    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+        <link rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+@endforeach
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111539331-1"></script>
     <script>
