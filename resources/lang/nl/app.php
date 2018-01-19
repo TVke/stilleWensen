@@ -22,7 +22,7 @@ return [
     'logout' => 'log uit',
 
     /* description */
-    'general_description' => 'Een project om binding te krijgen met de doven gemeenschap.',
+    'general_description' => 'Een project om binding te krijgen met de dovengemeenschap.',
     'overview_description' => 'Alle opgenomen wensen zijn geluidloos gemaakt en enkel de wenser zelf heeft de link naar de video met geluid.',
     'contact_description' => 'Op deze pagina kan je al je vragen kwijt over doven en over ons project.',
 
@@ -47,7 +47,7 @@ return [
 	/* contact-page */
     'contact-title' => 'Heb je een vraag voor ons?',
 	'contact-info' => 'Heb je een vraag over het project of doofheid? Geen probleem, we antwoorden zo snel mogelijk op jouw vraag!',
-	'contact-site-title' => 'Bezoek ook de Doof Vlaandere website',
+	'contact-site-title' => 'Bezoek ook de doof vlaanderen website',
 
 	'contact-subject' => 'Onderwerp:',
 	'contact-subject-project' => 'HET PROJECT',
@@ -90,8 +90,8 @@ return [
 
 	/* terms & conditions */
     'condition-1' => "We zijn gerechtigd om de opgenomen video’s, zowel met geluid als zonder geluid, op één van de KdG Hogeschool campussen af te spelen. Ook zijn we gerechtigd de video’s zonder geluid op internet te zetten, namelijk op de website van het project (https://stillewensen.be). Deze video’s kunnen dan ook verspreid worden vanop de website naar social media.",
-    'condition-2' => "We zijn niet aansprakelijk voor eventueel misbruik van de video na zijn verspreiding.",
-    'condition-3' => "Hierbij geeft u uw portretrecht af aan de maker van de video.",
+    'condition-2' => "We zijn niet aansprakelijk voor eventueel misbruik van de video's na zijn verspreiding.",
+    'condition-3' => "Hierbij geeft u (de wenser) uw portretrecht af aan de maker van de video.",
     'condition-4' => "KdG is eigenaar van de opgenomen video’s.",
 
 ];

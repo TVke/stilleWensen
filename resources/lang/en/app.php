@@ -16,82 +16,82 @@ return [
     'title' => 'Silent Wishes',
 
     'menu-info' => 'Info',
-	'menu-overview' => 'Wensen',
+	'menu-overview' => 'Wishes',
 	'menu-contact' => 'Contact',
 
-    'logout' => 'log uit',
+    'logout' => 'log out',
 
     /* description */
-    'general_description' => 'Een project om binding te krijgen met de doven gemeenschap',
-    'overview_description' => 'Alle opgenomen wensen zijn geluidloos gemaakt en enkel de wenser zelf heeft de link naar de video met geluid.',
-    'contact_description' => 'Op deze pagina kan je al je vragen kwijt over doven en over ons project.',
+    'general_description' => 'A project to create a connection with the deaf community',
+    'overview_description' => 'All recorded wishes are made soundless, only the wisher gets a link to access the video with sound.',
+    'contact_description' => 'On this page you can ask any question about deaf people and about our project.',
 
 	/* info-page */
-	'first-title' => 'Elk jaar worden er tijdens de feestdagen een hele hoop wensen uitgedeeld...',
-    'first-content' => "Zelf hadden we het geluk een aantal van die *wensen* te mogen *vastleggen* op de Meir in Antwerpen. Benieuwd naar *wat* we met deze *opnames gedaan* hebben?",
-	'first-button' => 'BEKIJK ZE HIER',
+	'first-title' => 'Every year at christmas time a lot of wishes get shared...',
+    'first-content' => "We had the fortune to *record* some of these *wishes* on the Meir in Antwerp. Are you curious *what* we did with these *recordings*?",
+	'first-button' => 'WATCH THEM HERE',
 
-	'twist-title' => 'Waarom Stille Wensen?',
-    'twist-content' => "*Velen* zijn zich *niet bewust* van het feit dat *niet iedereen* zulke *wensen* op een *evenwaardige manier* kan *ontvangen*. Hier hopen we met ons project *verandering* in te *brengen*.",
+	'twist-title' => 'Why Silent Wishes?',
+    'twist-content' => "*Many* people are *not aware* of the fact that *not everybody* is able to *receive* such *wishes* in an *equal way*. We hope to *change* this with our project.",
 
 	/* += wishes details */
-	'wishes-title' => "Hoe klinken zo'n wensen voor een *dove*?",
-    'wishes-info' => "De *feestdagen* zijn een periode vol *warmte* en *verdraagzaamheid*. Maar voor een dove betekenen de feestdagen ook veel *verwarring* en *chaos*. 
-    Via ons project laten we zoveel mogelijk *mensen ervaren* hoe het is om *doof* te zijn tijdens deze dagen en proberen we zo *meer begrip* voor doofheid te stimuleren.",
+	'wishes-title' => "How do such wishes sound to *deaf* person?",
+    'wishes-info' => " The *holidays* are a period full op *warmth* and *tolerance*. But for a deaf person does the holidays also mean  a lot of *confusion* and *chaos*. 
+    By doing this project we tried to make as many people as possible to experience how it is to be *deaf* and try to raise *more awareness* for the deaf community.",
 
-	'wishes-personal' => "Bekijk hieronder :Sender's wens voor :Reciever.",
+	'wishes-personal' => "Watch :Sender's wish for :Reciever below.",
 
     /* wishes */
-    'no-wishes' => 'Na de eerste filmdag komen hier de opgenomen wensen op. ',
+    'no-wishes' => 'The recorded wishes are shown here after the first day of recording. ',
 
 	/* contact-page */
-    'contact-title' => 'Heb je een vraag voor ons?',
-	'contact-info' => 'Heb je een vraag over het project of doofheid? Geen probleem, we antwoorden zo snel mogelijk op jouw vraag!',
-	'contact-site-title' => 'Bezoek ook de Doof Vlaandere website',
+    'contact-title' => 'Do you have a question for us?',
+	'contact-info' => 'Do you have a question about this project or about being deaf? No problem, we answer your question as soon as possible!',
+	'contact-site-title' => 'Visit also the site of deaf flanders',
 
-	'contact-subject' => 'Onderwerp:',
-	'contact-subject-project' => 'HET PROJECT',
-	'contact-subject-charity' => 'DOOFHEID',
-	'contact-name' => 'Naam:',
+	'contact-subject' => 'Subject:',
+	'contact-subject-project' => 'THE PROJECT',
+	'contact-subject-charity' => 'DEAFNESS',
+	'contact-name' => 'Name:',
 	'contact-email' => 'Email:',
-	'contact-question' => 'Vraag:',
-	'contact-submit' => 'STUUR',
+	'contact-question' => 'Question:',
+	'contact-submit' => 'SEND',
 
-    'contact-success' => 'We beantwoorden je vraag zo snel mogelijk.',
+    'contact-success' => 'We answer your question as soon as possible.',
 
-    'contact-text-question' => 'Heb je een vraag over het project of doofheid?',
-    'contact-text-answer' => 'Geen probleem, we antwoorden zo snel mogelijk op jouw vraag!',
-    'contact-link-context' => 'Bezoek ook de Doof Vlaanderen website',
+    'contact-text-question' => 'Do you have a question about the project or deafness?',
+    'contact-text-answer' => 'No problem, we answer your question as soon as possible!',
+    'contact-link-context' => 'Visit also the site of Deaf Flanders',
 
 	/* footer */
-    'share-title' => 'Deel',
-	'share-info' => 'Deel deze ervaring op je sociale media en steun zo de dovengemeenschap',
+    'share-title' => 'Share',
+	'share-info' => 'Share this experience on social media and support the deaf community this way',
 
-	'footer-contact-info' => 'Heb je een vraag voor ons of doof vlaanderen?',
-	'footer-contact-button' => 'CONTACTEER ONS',
-	'footer-menu-title' => "Overzicht pagina's",
-	'footer-charity-info' => 'Wil je meer weten over het goede doel?',
-	'footer-charity-button' => 'LEES MEER',
+	'footer-contact-info' => 'Do you have a question for us or for deaf flanders?',
+	'footer-contact-button' => 'CONTACT US',
+	'footer-menu-title' => "Overview pages",
+	'footer-charity-info' => 'Do you want to know more about the charity?',
+	'footer-charity-button' => 'READ MORE',
 	'footer-copywrite' => '© :year KdG',
 
 	/* wishers form */
-	'form-title' => 'Bedankt om mee te doen!',
-	'form-disclaimer' => '* door dit formulier in te vullen gaat u akkoord met de ',
-	'form-terms' => 'voorwaarden',
+	'form-title' => 'Thank you for your participation!',
+	'form-disclaimer' => '* by filling in this form you accept the ',
+	'form-terms' => 'terms and agreements',
 
-	'name-sender' => 'Naam zender*:',
-	'email-sender' => 'Email zender*:',
-	'name-receiver' => 'Naam ontvanger:',
-	'email-receiver' => 'Email ontvanger:',
-	'form-public' => 'Deze video met geluid mag publiek gedeeld worden',
-	'submit-button' => 'STUUR IN',
+	'name-sender' => 'Name sender*:',
+	'email-sender' => 'Email sender*:',
+	'name-receiver' => 'Name reciever:',
+	'email-receiver' => 'Email reciever:',
+	'form-public' => 'This video with sound is allowed to be publicly available',
+	'submit-button' => 'SEND',
 
-    'wisher-success' => 'Bedankt voor je steun.',
+    'wisher-success' => 'Thank you for your support.',
 
 	/* terms & conditions */
-    'condition-1' => "We zijn gerechtigd om de opgenomen video’s, zowel met geluid als zonder geluid, op één van de KdG Hogeschool campussen af te spelen. Ook zijn we gerechtigd de video’s zonder geluid op internet te zetten, namelijk op de website van het project (https://stillewensen.be). Deze video’s kunnen dan ook verspreid worden vanop de website naar social media.",
-    'condition-2' => "We zijn niet aansprakelijk voor eventueel misbruik van de video na zijn verspreiding.",
-    'condition-3' => "Hierbij geeft u uw portretrecht af aan de maker van de video.",
-    'condition-4' => "KdG is eigenaar van de opgenomen video’s.",
+    'condition-1' => "We are owner of the recorded movies, as well with or without sound, and are allowed to play they on one of the campuses of KdG Collage. Also are we allowed to put the movies without sound on the internet, to be precise on the site of the project (https://stillewensen.be). These movies can be spread for the site to social media.",
+    'condition-2' => "We are not liable for any eventual misuse of the movies after publication.",
+    'condition-3' => "By submitting this form you (the wisher) gives the image rights to the maker of the movie.",
+    'condition-4' => "KdG is owner of the recorded movies.",
 
 ];
