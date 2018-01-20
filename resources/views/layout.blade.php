@@ -55,6 +55,11 @@
 </head>
 <body class="bg-blue-darkest font-dosis font-normal text-grey-light text-center leading-normal">
 <header>
+    <div class="absolute pin-r pin-t py-2 sm:py-4 px-4 sm:px-6 flex">
+        <a href="{{ LaravelLocalization::getLocalizedURL('nl') }}"{{ (LaravelLocalization::getCurrentLocale()==="nl")?" class=text-teal":"" }}>NL</a>
+        <p class="px-2">|</p>
+        <a href="{{ LaravelLocalization::getLocalizedURL('en') }}"{{ (LaravelLocalization::getCurrentLocale()==="en")?" class=text-teal":"" }}>EN</a>
+    </div>
 
     @guest
         <a href="{{ route('info') }}" class="block text-center no-underline text-grey-light w-64 mx-auto">
