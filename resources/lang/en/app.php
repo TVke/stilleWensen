@@ -27,7 +27,7 @@ return [
     'contact_description' => 'On this page you can ask any question about deaf people and about our project.',
 
 	/* info-page */
-	'first-title' => 'Every year at christmas time a lot of wishes get shared...',
+	'first-title' => 'Every year in the holiday season a lot of wishes get shared...',
     'first-content' => "We had the fortune to *record* some of these *wishes* on the Meir in Antwerp. Are you curious *what* we did with these *recordings*?",
 	'first-button' => 'WATCH THEM HERE',
 
