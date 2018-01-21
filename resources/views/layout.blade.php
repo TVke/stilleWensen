@@ -55,7 +55,13 @@
 </head>
 <body class="bg-blue-darkest font-dosis font-normal text-grey-light text-center leading-normal">
 <header>
-
+    <div class="relative max-w-lg mx-auto">
+        <div class="absolute pin-r pin-t py-2 sm:py-4 px-4 sm:px-6 flex">
+            <a class="text-xs{{ (LaravelLocalization::getCurrentLocale()==="nl")?" text-teal":"" }}" href="{{ LaravelLocalization::getLocalizedURL('nl') }}">NL</a>
+            <p class="px-1 -mt-1 text-lg">/</p>
+            <a class="text-xs{{ (LaravelLocalization::getCurrentLocale()==="en")?" text-teal":"" }}" href="{{ LaravelLocalization::getLocalizedURL('en') }}">ENG</a>
+        </div>
+    </div>
     @guest
         <a href="{{ route('info') }}" class="block text-center no-underline text-grey-light w-64 mx-auto">
             <img src="{{ asset('/storage/img/laatste_logo.svg') }}" alt="logo" role="presentation" class="w-32 block m-auto relative up-15">
